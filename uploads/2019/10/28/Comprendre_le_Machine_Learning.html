@@ -1,0 +1,1442 @@
+<!DOCTYPE html>
+<!-- saved from url=(0068)https://www.lemagit.fr/essentialguide/Comprendre-le-Machine-Learning -->
+<html class="no-js gt-ie8" dir="ltr" lang="fr" prefix="og: http://ogp.me/ns#" itemscope="" itemtype="http://schema.org/Article"><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script type="text/javascript" async="" src="./Comprendre le Machine Learning_files/linkid.js.téléchargement"></script><style type="text/css">a.fl_flip_button,a.fl_profile_button{color:#474747;text-decoration:none;display:inline-block;line-height:18px;font-family:'Helvetica Neue',Helvetica,sans-serif;font-size:12px;font-weight:500;text-indent:19px;position:relative;padding-right:5px;background-color:#f0f0f0;border:solid 1px #ccc;height:18px;box-sizing:content-box;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;background-image:-webkit-linear-gradient(bottom,#dfdfdf,#f7f7f7);background-image:-moz-linear-gradient(bottom,#dfdfdf,#f7f7f7);background-image:-o-linear-gradient(bottom,#dfdfdf,#f7f7f7);background-image:linear-gradient(to top,#dfdfdf,#f7f7f7)}a.fl_flip_button b,a.fl_profile_button b{background:url(data:image/gif;base64,R0lGODlhGAAYAJEAAOTMzPHm5v///80EACH/C1hNUCBEYXRhWE1QPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS41LWMwMTQgNzkuMTUxNDgxLCAyMDEzLzAzLzEzLTEyOjA5OjE1ICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdFJlZj0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlUmVmIyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ0MgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NjFGNjBCQkU3NzFCMTFFMzhEOTZFMjU1NDZCRTg2NjMiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NjFGNjBCQkY3NzFCMTFFMzhEOTZFMjU1NDZCRTg2NjMiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo2MUY2MEJCQzc3MUIxMUUzOEQ5NkUyNTU0NkJFODY2MyIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo2MUY2MEJCRDc3MUIxMUUzOEQ5NkUyNTU0NkJFODY2MyIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PgH//v38+/r5+Pf29fTz8vHw7+7t7Ovq6ejn5uXk4+Lh4N/e3dzb2tnY19bV1NPS0dDPzs3My8rJyMfGxcTDwsHAv769vLu6ubi3trW0s7KxsK+urayrqqmop6alpKOioaCfnp2cm5qZmJeWlZSTkpGQj46NjIuKiYiHhoWEg4KBgH9+fXx7enl4d3Z1dHNycXBvbm1sa2ppaGdmZWRjYmFgX15dXFtaWVhXVlVUU1JRUE9OTUxLSklIR0ZFRENCQUA/Pj08Ozo5ODc2NTQzMjEwLy4tLCsqKSgnJiUkIyIhIB8eHRwbGhkYFxYVFBMSERAPDg0MCwoJCAcGBQQDAgEAACH5BAAAAAAALAAAAAAYABgAAAIynI+py+0Po5xUiiuC3hrizG0eForPV3YnBrQA9bnvFLswa9NYdXy84fsFf8Si8YhMGgoAOw==) no-repeat;background-size:12px 12px;height:12px;width:12px;position:absolute;top:3px;left:3px}a.fl_flip_button:hover,a.fl_profile_button:hover{border-color:#bfbfbf}a.fl_flip_button:active,a.fl_profile_button:active{border:solid 1px #bfbfbf;background-image:-webkit-linear-gradient(top,#dfdfdf,#ebebeb);background-image:-moz-linear-gradient(top,#dfdfdf,#ebebeb);background-image:-o-linear-gradient(top,#dfdfdf,#ebebeb);background-image:linear-gradient(to bottom,#dfdfdf,#ebebeb)}</style><style type="text/css">a.fl_flip_button,a.fl_profile_button{color:#474747;text-decoration:none;display:inline-block;line-height:18px;font-family:'Helvetica Neue',Helvetica,sans-serif;font-size:12px;font-weight:500;text-indent:19px;position:relative;padding-right:5px;background-color:#f0f0f0;border:solid 1px #ccc;height:18px;box-sizing:content-box;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;background-image:-webkit-linear-gradient(bottom,#dfdfdf,#f7f7f7);background-image:-moz-linear-gradient(bottom,#dfdfdf,#f7f7f7);background-image:-o-linear-gradient(bottom,#dfdfdf,#f7f7f7);background-image:linear-gradient(to top,#dfdfdf,#f7f7f7)}a.fl_flip_button b,a.fl_profile_button b{background:url(data:image/gif;base64,R0lGODlhGAAYAJEAAOTMzPHm5v///80EACH/C1hNUCBEYXRhWE1QPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS41LWMwMTQgNzkuMTUxNDgxLCAyMDEzLzAzLzEzLTEyOjA5OjE1ICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdFJlZj0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlUmVmIyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ0MgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NjFGNjBCQkU3NzFCMTFFMzhEOTZFMjU1NDZCRTg2NjMiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NjFGNjBCQkY3NzFCMTFFMzhEOTZFMjU1NDZCRTg2NjMiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo2MUY2MEJCQzc3MUIxMUUzOEQ5NkUyNTU0NkJFODY2MyIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo2MUY2MEJCRDc3MUIxMUUzOEQ5NkUyNTU0NkJFODY2MyIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PgH//v38+/r5+Pf29fTz8vHw7+7t7Ovq6ejn5uXk4+Lh4N/e3dzb2tnY19bV1NPS0dDPzs3My8rJyMfGxcTDwsHAv769vLu6ubi3trW0s7KxsK+urayrqqmop6alpKOioaCfnp2cm5qZmJeWlZSTkpGQj46NjIuKiYiHhoWEg4KBgH9+fXx7enl4d3Z1dHNycXBvbm1sa2ppaGdmZWRjYmFgX15dXFtaWVhXVlVUU1JRUE9OTUxLSklIR0ZFRENCQUA/Pj08Ozo5ODc2NTQzMjEwLy4tLCsqKSgnJiUkIyIhIB8eHRwbGhkYFxYVFBMSERAPDg0MCwoJCAcGBQQDAgEAACH5BAAAAAAALAAAAAAYABgAAAIynI+py+0Po5xUiiuC3hrizG0eForPV3YnBrQA9bnvFLswa9NYdXy84fsFf8Si8YhMGgoAOw==) no-repeat;background-size:12px 12px;height:12px;width:12px;position:absolute;top:3px;left:3px}a.fl_flip_button:hover,a.fl_profile_button:hover{border-color:#bfbfbf}a.fl_flip_button:active,a.fl_profile_button:active{border:solid 1px #bfbfbf;background-image:-webkit-linear-gradient(top,#dfdfdf,#ebebeb);background-image:-moz-linear-gradient(top,#dfdfdf,#ebebeb);background-image:-o-linear-gradient(top,#dfdfdf,#ebebeb);background-image:linear-gradient(to bottom,#dfdfdf,#ebebeb)}</style><script src="./Comprendre le Machine Learning_files/7034.js.téléchargement" async="" type="text/javascript"></script><script type="text/javascript" async="" src="./Comprendre le Machine Learning_files/analytics.js.téléchargement"></script><script async="" src="./Comprendre le Machine Learning_files/gtm.js.téléchargement"></script><script async="" src="./Comprendre le Machine Learning_files/index.php"></script><script type="text/javascript" async="" src="./Comprendre le Machine Learning_files/geo2.js.téléchargement"></script>
+	
+			<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+			<title>Comprendre le Machine Learning</title>
+			<meta name="viewport" content="width=device-width,initial-scale=1">
+			<meta name="description" content="Comprendre, l’apprentissage automatisé. L’une des formes de l’intelligence artificielle la plus répandue à ce jour, le Machine Learning s’appuie sur des raisonnements mathématiques, traduits informatiquement dans les algorithmes, capables de digérer de grandes quantités d’informations pour acquérir de nouvelles connaissances ou encore comprendre un comportement.">
+			<meta name="robots" content="noodp">
+			<link rel="canonical" href="https://www.lemagit.fr/essentialguide/Comprendre-le-Machine-Learning">
+			<meta property="og:title" content="Comprendre le Machine Learning">
+			<meta property="og:site_name" content="LeMagIT">
+			<meta property="og:url" content="https://www.lemagit.fr/essentialguide/Comprendre-le-Machine-Learning">
+			<meta property="og:description" content="Comprendre, l’apprentissage automatisé. L’une des formes de l’intelligence artificielle la plus répandue à ce jour, le Machine Learning s’appuie sur des raisonnements mathématiques, traduits informatiquement dans les algorithmes, capables de digérer de grandes quantités d’informations pour acquérir de nouvelles connaissances ou encore comprendre un comportement.">
+			<meta property="fb:app_id" content="450112435142623">
+			<meta property="og:type" content="article">
+			<meta property="og:locale" content="fr_FR">
+			<meta property="article:publisher" content="https://www.facebook.com/LeMagIT">
+			<meta itemprop="name" content="Comprendre le Machine Learning">
+			<meta itemprop="description" content="Comprendre, l’apprentissage automatisé. L’une des formes de l’intelligence artificielle la plus répandue à ce jour, le Machine Learning s’appuie sur des raisonnements mathématiques, traduits informatiquement dans les algorithmes, capables de digérer de grandes quantités d’informations pour acquérir de nouvelles connaissances ou encore comprendre un comportement.">
+			<meta name="twitter:card" content="summary_large_image">
+			<meta name="twitter:site" content="@lemagit">
+			<meta name="twitter:title" content="Comprendre le Machine Learning">
+			<meta name="twitter:description" content="Comprendre, l’apprentissage automatisé. L’une des formes de l’intelligence artificielle la plus répandue à ce jour, le Machine Learning s’appuie sur des raisonnements mathématiques, traduits inform...">
+			<meta property="og:image" content="https://cdn.ttgtmedia.com/visuals/LeMagIT/hero_article/MachineLearning.jpg">
+			<meta itemprop="image" content="https://cdn.ttgtmedia.com/visuals/LeMagIT/hero_article/MachineLearning.jpg">
+			<meta name="twitter:image" content="https://cdn.ttgtmedia.com/visuals/LeMagIT/hero_article/MachineLearning.jpg">
+			<script src="./Comprendre le Machine Learning_files/jquery.min.js.téléchargement"></script><link rel="stylesheet" href="./Comprendre le Machine Learning_files/main.css"><script src="./Comprendre le Machine Learning_files/responsive.min.js.téléchargement"></script><script src="./Comprendre le Machine Learning_files/4519332260.js.téléchargement"></script><link rel="stylesheet" href="./Comprendre le Machine Learning_files/lemagit.css"><script>
+TT("page", {"topical":true,"dlotitle":"Étudiez 5 projets Big Data pour construire le vôtre","parentTopicName":"Gestion des données","guideId":"450432289","siteName":"LeMagIT","appCode":"0","clusterId":["450295527","450283287"],"uaid":"UA-636822-2","uid":"450432289","adAbbr":"LeMagIT","parentTopicId":"2240186227","zone":"ESSENTIALGUIDE","clusterName":["BDataSM","BDAnalBI"],"dlosrc":"Topic","ga":true,"id":"9dc45c1681e70610VgnVCM100000ef01c80aRCRD","lang":"fr","collectionId":"450432289","regTopicName":"Big Data / Analytics / Business Intelligence","timestamp":"2019-10-27 23:02:42","siteType":"editorial","gaPageTrackUrl":"/page/etpk_Gestion des données-2240186227/ptpk_Big Data-2240186232/true/ESSENTIALGUIDE/content/cid_450432289/date_20171222/mem_0/rtpk_Big Data % Analytics % Business Intelligence-1557530/idx_0","homeAdId":"2240182705","uidType":"content","regTopicId":"1557530","pubDate":"20171222","adScheme":"4","ttgtRegHost":"https://users.techtarget.com","atHost":"https://go.techtarget.com","regHost":"https://users.lemagit.fr","dloid":"252436200","topicId":"2240186232","adId":"450432289","pageIndex":0,"siteId":247,"topicName":"Big Data","topicIds":["2240186232","2240186228"],"gaSiteAcct":"UA-636822-2"});
+</script>
+
+<!-- Begin Chartbeat -->
+		<script>var _sf_startpt=(new Date()).getTime();</script><!-- End Chartbeat -->
+	<link rel="shortcut icon" type="image/x-icon" href="https://www.lemagit.fr/favicon.ico">
+	<link rel="apple-touch-icon" sizes="144×144" href="https://www.lemagit.fr/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="114×114" href="https://www.lemagit.fr/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="72×72" href="https://www.lemagit.fr/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" href="https://www.lemagit.fr/apple-touch-icon-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" sizes="144×144" href="https://www.lemagit.fr/apple-touch-icon-144x144-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" sizes="114×114" href="https://www.lemagit.fr/apple-touch-icon-114x114-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" sizes="72×72" href="https://www.lemagit.fr/apple-touch-icon-72x72-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" href="https://www.lemagit.fr/apple-touch-icon-precomposed.png">
+
+	<script src="./Comprendre le Machine Learning_files/advertisement.js.téléchargement"></script><script type="text/javascript" async="" src="./Comprendre le Machine Learning_files/dpm_b4c96d80854dd27e76d8cc9e21960eebda52e962.min.js.téléchargement"></script><script src="./Comprendre le Machine Learning_files/auto_opt_in-v2.0.1083.js.téléchargement"></script><script src="./Comprendre le Machine Learning_files/f.txt"></script><script src="./Comprendre le Machine Learning_files/f(1).txt"></script><script src="./Comprendre le Machine Learning_files/sp-bootstrap.js.téléchargement"></script><script src="./Comprendre le Machine Learning_files/sp-msg.js.téléchargement"></script><iframe name="__cmpLocator" src="./Comprendre le Machine Learning_files/saved_resource.html"></iframe><script>(function () { var cookie='consentUUID=d6e46b0e-0266-4790-9ffe-698d917eea0c; Path=/; Max-Age=31536000; expires=Tue, 27 Oct 2020 03:02:46 GMT;';
+if (false) {
+  var h = window.location && window.location.hostname;
+  if (h) {
+    var rc = (/.co.uk$/.test(h) || /.com.br$/.test(h) || /.com.au$/.test(h) || /.co.nz$/.test(h) ) ? 3 : 2;
+    var ha = h.split('.');
+    var rda = ha.slice(ha.length - rc);
+    if (rda.length > 1) {
+      var rd = rda.join('.');
+      cookie += ' Domain=' + rd + ';';
+    }
+  }
+}
+document.cookie = cookie;
+ })();</script><script>(function () { var cookie='euconsent=BOj0eqjOj0eqjAKAWBENCb-AAAAo1rv___7__9_-____9uz7Ov_v_f__33e8779v_h_7_-___u_-3zd4u_1vf99yfm1-7ctr3tp_87uesm_Xur__59__3z3_9phP78k89r7337Ew4MA; Path=/; Max-Age=31536000; expires=Tue, 27 Oct 2020 03:02:46 GMT;';
+if (false) {
+  var h = window.location && window.location.hostname;
+  if (h) {
+    var rc = (/.co.uk$/.test(h) || /.com.br$/.test(h) || /.com.au$/.test(h) || /.co.nz$/.test(h) ) ? 3 : 2;
+    var ha = h.split('.');
+    var rda = ha.slice(ha.length - rc);
+    if (rda.length > 1) {
+      var rd = rda.join('.');
+      cookie += ' Domain=' + rd + ';';
+    }
+  }
+}
+document.cookie = cookie;
+ })();</script><script>(function () { window.__cmp && typeof window.__cmp.hasConsentData === "function" && window.__cmp.hasConsentData(); })();</script><script>(function () { var d = new Date(); d.setTime(d.getTime()+90*24*60*60*1000); var cookieVal = '_sp_enable_dfp_personalized_ads=false; Path=/; Max-Age=7776000; expires='+d.toGMTString()+';'; var h = window.location && window.location.hostname; if (h) { var rc = (/\.co\.uk$/.test(h) || /\.com\.br$/.test(h)) ? 3 : 2; var ha = h.split('.'); var rda = ha.slice(ha.length - rc); if (rda.length > 1) { var rd = rda.join('.'); cookieVal += ' Domain=' + rd + ';'; } } document.cookie = cookieVal; })();</script><script>(function () { console.log("typeof sp_message_loaded_adapt: " + typeof sp_message_loaded_adapt);
+if(typeof sp_message_loaded_adapt !== 'undefined' && sp_message_loaded_adapt == true){
+    var _sp_an_OptOutImage = new Image();
+   _sp_an_OptOutImage.src = "https://ib.adnxs.com/seg?member=827&add=17369550";
+console.log("AdDaptive Rejected.");
+}
+sp_message_loaded_adapt = true;
+
+ })();</script><script src="./Comprendre le Machine Learning_files/aceO05NT05yQT9OOU1DTj85RE13UHVpXjs9PUlPSE45Qz51a29oXjs8SnVOTE8_Xkw_QD9MTD9MdUJOTkpNXWt5XWp-XWp-UVFRZkFJSUFGP2Y9SUddan5eTT9NTUNJSDlMP0A_TEw_THVCTk5KTV1reV1qfl1qflFRUWZBSUlBRj9mPUlHXWp-Xk0_TU1"></script><style>/* Default settings */
+.sp_veil1572231766810 {
+  position: fixed;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  z-index: 99999999;
+  display: block;
+  overflow: hidden;
+}
+
+.sp_message1572231766810 {
+    z-index: 99999999;
+}
+
+button.sp_choice1572231766810 {
+  outline: none;
+  cursor: pointer;
+}
+
+.sp_message_dismiss1572231766810 {
+  outline: none;
+  cursor: pointer;
+}
+
+#sp_message_id1572231766810 .sp_choice-21572231766810{
+    display:none;
+}
+
+.sp_veil1572231766810 iframe {
+    overflow: hidden;
+    z-index: 9999998;
+}
+
+.sp_iframe_container1572231766810 {
+    position: fixed;
+    z-index: 9999999;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.sp_iframe_container1572231766810 iframe {
+    height: 100%;
+    width: 100%;
+    z-index: 9999999;
+    overflow: hidden;
+}
+
+/* START CUSTOMIZATION HERE */
+/* Background overlay */
+#bg-overlay {
+    position: fixed;
+    overflow: hidden;
+    background: #000000;
+    opacity: 0.5;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+/* Message modal */
+.sp_message_panel1572231766810 {
+    width: auto;
+    background-color: #F5F5F5;
+    padding: 15px;
+    z-index: 99999999;
+}
+
+.sp_message_column1572231766810.sp_message_content1572231766810 {
+  display: flex;
+  flex-direction: row;
+  max-width: 1200px;
+  margin: auto;
+  align-items: center;
+  z-index: 99999999;
+}
+
+/* Close button */
+.sp_message_dismiss1572231766810 {
+    display: none;
+}
+
+.sp_message_body1572231766810 {
+  margin-right: 30px;
+}
+
+/* Title text */
+.sp_message_title1572231766810 {
+  font-family: Arial;
+    font-size:14px;
+    font-weight:bold;
+}
+
+/* Body text */
+.sp_message_text1572231766810 {
+    font-family: Arial;
+    font-size:12px;
+    margin:10px 0;
+    line-height: 130%;
+}
+
+a {
+  color: #00A69F;
+}
+
+a:hover{
+    color: #006860;
+}
+
+span.sp_pm_link1572231766810{
+     color: #00A69F;
+     cursor: pointer;
+}
+span:hover.sp_pm_link1572231766810{
+     color: #006860;
+}
+
+/* Choice options */
+.sp_choices1572231766810 {
+  display: flex;
+  flex-direction: row;
+}
+
+button.sp_choice1572231766810 {
+    border:0px;
+    background-color: #f0f0f0;
+    padding:10px 15px;
+    border-radius: 5px;
+}
+
+button.sp_choice-01572231766810 {
+    background-color: #00A69F;
+    color: #fff;
+    padding:10px 25px;
+    border-radius: 5px;
+    font-size:16px;
+    font-weight: 600;
+}
+
+button.sp_choice-11572231766810 {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    background-color: transparent;
+    padding:10px;
+    font-size:16px;
+}
+
+/* Button Hover */
+button.sp_choice1572231766810:hover {
+  opacity: .8;
+}
+
+/* Button Pressed */
+button.sp_choice1572231766810:active {
+  opacity: .6;
+}
+
+
+/* Mobile */
+@media only screen and (max-width: 480px) {
+
+.sp_message_panel1572231766810 {
+  width: 90%;
+}
+
+.sp_message_column1572231766810.sp_message_content1572231766810 {
+  flex-direction: column;
+  align-items: baseline;
+  z-index: 99999999;
+}
+.sp_message_body1572231766810 {
+  margin-right: 0px;
+}</style><script>(function () { var cookie='consentUUID=d6e46b0e-0266-4790-9ffe-698d917eea0c; Max-Age=31536000; expires=Tue, 27 Oct 2020 03:02:47 GMT;';
+if (false) {
+  var h = window.location && window.location.hostname;
+  if (h) {
+    var rc = (/.co.uk$/.test(h) || /.com.br$/.test(h) || /.com.au$/.test(h) || /.co.nz$/.test(h) ) ? 3 : 2;
+    var ha = h.split('.');
+    var rda = ha.slice(ha.length - rc);
+    if (rda.length > 1) {
+      var rd = rda.join('.');
+      cookie += ' Domain=' + rd + ';';
+    }
+  }
+}
+document.cookie = cookie;
+ })();</script><script>(function () { var cookie='consentUUID=d6e46b0e-0266-4790-9ffe-698d917eea0c; Path=/; Max-Age=31536000; expires=Tue, 27 Oct 2020 03:02:47 GMT;';
+if (false) {
+  var h = window.location && window.location.hostname;
+  if (h) {
+    var rc = (/.co.uk$/.test(h) || /.com.br$/.test(h) || /.com.au$/.test(h) || /.co.nz$/.test(h) ) ? 3 : 2;
+    var ha = h.split('.');
+    var rda = ha.slice(ha.length - rc);
+    if (rda.length > 1) {
+      var rd = rda.join('.');
+      cookie += ' Domain=' + rd + ';';
+    }
+  }
+}
+document.cookie = cookie;
+ })();</script><script>(function () { var cookie='euconsent=BOj0eqjOpH4dnAGABBENCs-AAAAsJrv___7__9_-____9uz7Ov_v_f__33e8779v_h_7_-___u_-3zd4u_1vf99yfm1-7ctr3tp_87uesm_Xur__59__3z3_9phP78k89r7337Ew4MAAAAAAAAA; Max-Age=31536000; expires=Tue, 27 Oct 2020 03:02:47 GMT;';
+if (false) {
+  var h = window.location && window.location.hostname;
+  if (h) {
+    var rc = (/.co.uk$/.test(h) || /.com.br$/.test(h) || /.com.au$/.test(h) || /.co.nz$/.test(h) ) ? 3 : 2;
+    var ha = h.split('.');
+    var rda = ha.slice(ha.length - rc);
+    if (rda.length > 1) {
+      var rd = rda.join('.');
+      cookie += ' Domain=' + rd + ';';
+    }
+  }
+}
+document.cookie = cookie;
+ })();</script><script>(function () { var cookie='euconsent=BOj0eqjOpH4dnAGABBENCs-AAAAsJrv___7__9_-____9uz7Ov_v_f__33e8779v_h_7_-___u_-3zd4u_1vf99yfm1-7ctr3tp_87uesm_Xur__59__3z3_9phP78k89r7337Ew4MAAAAAAAAA; Path=/; Max-Age=31536000; expires=Tue, 27 Oct 2020 03:02:47 GMT;';
+if (false) {
+  var h = window.location && window.location.hostname;
+  if (h) {
+    var rc = (/.co.uk$/.test(h) || /.com.br$/.test(h) || /.com.au$/.test(h) || /.co.nz$/.test(h) ) ? 3 : 2;
+    var ha = h.split('.');
+    var rda = ha.slice(ha.length - rc);
+    if (rda.length > 1) {
+      var rd = rda.join('.');
+      cookie += ' Domain=' + rd + ';';
+    }
+  }
+}
+document.cookie = cookie;
+ })();</script><script>(function () { window.__cmp && typeof window.__cmp.hasConsentData === "function" && window.__cmp.hasConsentData(); })();</script><script>(function () { var d = new Date(); d.setTime(d.getTime()+90*24*60*60*1000); var cookieVal = '_sp_enable_dfp_personalized_ads=true; Path=/; Max-Age=7776000; expires='+d.toGMTString()+';'; var h = window.location && window.location.hostname; if (h) { var rc = (/\.co\.uk$/.test(h) || /\.com\.br$/.test(h)) ? 3 : 2; var ha = h.split('.'); var rda = ha.slice(ha.length - rc); if (rda.length > 1) { var rd = rda.join('.'); cookieVal += ' Domain=' + rd + ';'; } } document.cookie = cookieVal; })();</script></head>
+<body id="essentialGuide" class="header-desktop-fixed" style="">
+	<!-- Begin Google Tag Manager -->
+		<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PWWZSH" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-PWWZSH');</script><!-- End Google Tag Manager -->
+	<div id="site-container" class="site-container"><div id="cmp-banner"><div id="sp_message_id1572231766810" class="sp_message_container1572231766810" style="display: block;"><div class="sp_message1572231766810" style="display: block;"><div id="sp_message_panel_id1572231766811" class="sp_message_panel1572231766810"><div class="sp_message_frame1572231766810"><div class="sp_message_row1572231766810"><button class="sp_message_dismiss1572231766810">x</button><div class="sp_side_image1572231766810 sp_left_image1572231766810 sp_message_column1572231766810"></div><div class="sp_message_column1572231766810 sp_message_content1572231766810"><div class="sp_message_body1572231766810" id="sp_message_body_id1572231766811"><div class="sp_message_title1572231766810">Avis de confidentialité</div><div class="sp_message_text1572231766810">Techtarget et ses partenaires utilisent des technologies comme les cookies dans le but d’améliorer l’expérience utilisateur et de proposer des contenus et publicités adaptées. Pour plus d’informations, veuillez lire notre <b><a href="https://www.techtarget.com/cookie-policy-fr/?utm_source=cmp&amp;utm_medium=banner&amp;utm_campaign=consent&amp;utm_term=cookie" target="_blank">politique de cookies</a></b>. Si vous souhaitez modifier vos préférences, veuillez <b><span onclick="javascript:cipheredClassName = _sp_.msg.getMorphedClassName(&#39;sp_choice_type_12&#39;);var el = document.getElementsByClassName(cipheredClassName)[0];el.click();" class="sp_pm_link1572231766810">cliquer ici.</span>
+</b> En fermant cette fenêtre ou en continuant à utiliser notre site, vous agréez à nos politiques de cookies et de <b><a href="https://www.techtarget.fr/privacy-policy-fr/?utm_source=cmp&amp;utm_medium=banner&amp;utm_campaign=consent&amp;utm_term=privacy" target="_blank">confidentialité.</a></b></div></div> <div class="sp_choices1572231766810">  <button class="sp_choice1572231766810 sp_choice-01572231766810 sp_choice_type_111572231766810">OK</button>  <button class="sp_choice1572231766810 sp_choice-11572231766810 sp_choice_type_111572231766810">×</button>  <button class="sp_choice1572231766810 sp_choice-21572231766810 sp_choice_type_121572231766810">Show Purposes</button> </div> </div><div class="sp_side_image1572231766810 sp_right_image1572231766810 sp_message_column1572231766810"></div></div></div><div class="clearfix1572231766810"></div></div></div></div></div>
+		<!-- PinnedNavBarController, generated at 12:50:03 Sun Oct 27, 2019, by cds6 -->
+<!-- AdsController, generated at 12:50:03 Sun Oct 27, 2019, by cds6 -->
+<div id="interstitial" class="ad ad-ist"><script>GPT.display('interstitial')</script></div><div class="ad-wrapper header-leaderboard ad-mobile" style="position: inherit; z-index: 99; width: 100%; background-color: rgb(241, 241, 241); top: auto;">
+	<!-- AdsController, generated at 12:50:03 Sun Oct 27, 2019, by cds6 -->
+<div id="mobile-lb" class="ad ad-mb"><script>GPT.display('mobile-lb')</script></div></div>
+<header class="header header_v2-keep-nav" id="page-header" style="top: 0px;">
+	<button class="nav-toggle" style="-webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); touch-action: none;"><i class="icon" data-icon="9"></i></button>
+	<a href="https://www.lemagit.fr/" class="header-logo mobile-link" style="">
+		<span class="header-logo-mobile"><img src="./Comprendre le Machine Learning_files/lemag_logo_mobile.png"></span>
+	</a>
+	<a href="https://www.lemagit.fr/" class="header-logo desktop-link">
+		<img src="./Comprendre le Machine Learning_files/lemag_logo.png" alt="LeMagIT" class="header-logo-desktop replace_2x">
+		<img src="./Comprendre le Machine Learning_files/lemag_logo.png" alt="LeMagIT" class="header-logo-small replace_2x">
+	</a> 
+
+	<a href="https://www.techtarget.com/fr" class="header-logo-tt-desktop">
+		<img src="./Comprendre le Machine Learning_files/cw_tt_logo.png" alt="TechTarget" class="replace_2x">
+	</a>
+	<button class="header-search-toggle" style="-webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); touch-action: none; width: 1109px;"><i class="icon" data-icon="g"></i></button>
+	<form action="https://www.lemagit.fr/recherche/question" method="get" class="header-search" style="width: 1051px;">
+		<label for="header-search-input" class="visuallyhidden">Rechercher sur LeMagIT</label>
+		<input class="header-search-input lemag" id="header-search-input" type="text" name="q" placeholder="Rechercher sur LeMagIT">
+		<button class="header-search-submit"><i class="icon" data-icon="g"></i></button>
+	</form>
+
+	<nav class="nav" id="page-nav">
+		<a href="https://users.lemagit.fr/registration/LeMagIT/LoginRegister.page?fromURL=https://www.lemagit.fr/essentialguide/Comprendre-le-Machine-Learning" class="nav-join-pro"><span>S'inscrire maintenant. </span></a>
+		<div class="nav-user">
+				<a href="https://users.lemagit.fr/registration/LeMagIT/LoginRegister.page?fromURL=https://www.lemagit.fr/essentialguide/Comprendre-le-Machine-Learning"><span class="nav-user-action">S'identifier</span></a>
+				<a href="https://users.lemagit.fr/registration/LeMagIT/Register.page" class="register"><span class="nav-user-action">S'abonner</span></a>
+			</div>
+		<script>TT(["context","lib/jquery"],function(c,$){var u=c.getUser();if(u.loggedIn){$('div.nav-user').children("a:first")
+				.before('<i class="icon header_logged_in_icon" title="'+u.displayName+'"></i>')
+				.attr("href", "https://users.lemagit.fr/registration/LeMagIT/Logout.page?fromURL=" + window.location.href).children("span.nav-user-action:first").text('Déconnexion');
+				$('.register').removeAttr('href');$('a.register').hide();}else{$('div.nav-user').children("a:first").attr("href", "https://users.lemagit.fr/registration/LeMagIT/LoginRegister.page?fromURL="+window.location.href);
+				$('a.nav-join-pro').attr("href", "https://users.lemagit.fr/registration/LeMagIT/LoginRegister.page?fromURL="+window.location.href);}});
+		</script>
+		<div class="nav-links">
+				<ul>
+					<li id="nav-links-Contacts"><a href="https://www.lemagit.fr/a-propos/contact">Contacts</a></li>
+					<li id="nav-links-Cookies"><a href="https://www.techtarget.com/html/cookie_policy_fr.html">Cookies</a></li>
+					<li id="nav-links-Agendapartenaires"><a href="https://www.lemagit.fr/evenements">Agenda partenaires</a></li>
+					<li id="nav-links-RessourcesPDF"><a href="https://www.lemagit.fr/eproducts">Ressources PDF</a></li>
+					<li><a href="https://www.lemagit.fr/ehandbook/Enquete-Salaires-Formation-IT-2018-2019?Offer=HeaderEditLink">Enquête Salaires et Emploi IT 2018-2019</a></li>
+					</ul>
+			</div>
+		<div class="nav-rss">
+				<a href="https://www.lemagit.fr/rss"><span class="nav-user-action">RSS</span></a>
+			</div>
+		<ul class="nav-list">
+		
+			<li class="nav-list-item nav-list-item-lemag" id="categoriesMenu">
+				<div class="nav-list-item-header">
+					<span class="nav-list-item-header-title">Catégories</span> 
+					<i class="icon icon-arrow-down" data-icon="5"></i><i class="icon icon-navigation-detail" data-icon="A"></i>
+				</div>
+				<div class="nav-list-sublist nav-list-item-dropdown">
+					<ul class="nav-list-item-jscroll">
+						<li class="nav-list-sublist-item"><a href="https://www.lemagit.fr/actualites">Actualités</a></li>
+							<li class="nav-list-sublist-item"><a href="https://www.lemagit.fr/Projets-IT">Projets IT</a></li>
+							<li class="nav-list-sublist-item"><a href="https://www.lemagit.fr/conseils">Conseils IT</a></li>
+							<li class="nav-list-sublist-item"><a href="https://www.lemagit.fr/opinions">Opinions</a></li>
+							<li class="nav-list-sublist-item"><a href="https://www.lemagit.fr/guides">Guides Essentiels</a></li>
+							<li class="nav-list-sublist-item"><a href="https://www.lemagit.fr/dessins">Dessins</a></li>
+							<li class="nav-list-sublist-item"><a href="https://www.lemagit.fr/definitions">Définitions IT</a></li>
+							</ul>
+				</div>
+			</li>
+			<li class="nav-list-item nav-list-item-lemag" id="nav-list-item-topics">
+				<div class="nav-list-item-header">
+					<span class="nav-list-item-header-title">Technologies</span> <i class="icon icon-arrow-down" data-icon="5"></i><i class="icon icon-navigation-arrow" data-icon="B"></i>
+				</div>
+				<div class="nav-list-item-dropdown infotype">
+					<div class="nav-list-item-jscroll">
+						<div class="nav-list-child-topics" id="child-topic-359d7ec12535f310VgnVCM1000000d01c80aRCRD">
+								<div class="nav-list-sublist-header nav-list-sublist-header-topics">
+									<a href="https://www.lemagit.fr/ressources/Applications-dentreprise"><span class="nav-list-sublist-header-topics-title">Applications d'entreprise</span></a>
+									<span class="view-all">Retour<i class="icon" data-icon="6"></i></span>
+								</div>
+								<ul class="nav-list-sublist">
+									<li class="nav-list-sublist-item"><a href="https://www.lemagit.fr/ressources/Applications-metiers">Applications métiers</a></li>
+									<li class="nav-list-sublist-item"><a href="https://www.lemagit.fr/ressources/Applications-transversales-PGI-ERP">ERP</a></li>
+									<li class="nav-list-sublist-item"><a href="https://www.lemagit.fr/ressources/Bureautique">Bureautique</a></li>
+									<li class="nav-list-sublist-item"><a href="https://www.lemagit.fr/ressources/Gestion-de-contenu">Gestion de contenu</a></li>
+									<li class="nav-list-sublist-item"><a href="https://www.lemagit.fr/ressources/Gestion-de-la-relation-client-CRM">CRM</a></li>
+									<li class="nav-list-sublist-item"><a href="https://www.lemagit.fr/ressources/Outils-collaboratifs">Outils Collaboratifs</a></li>
+									<li class="nav-list-sublist-item"><a href="https://www.lemagit.fr/ressources/SAP">SAP</a></li>
+									</ul>
+							</div>
+						<div class="nav-list-child-topics" id="child-topic-b39d7ec12535f310VgnVCM1000000d01c80aRCRD">
+								<div class="nav-list-sublist-header nav-list-sublist-header-topics">
+									<a href="https://www.lemagit.fr/ressources/Carriere"><span class="nav-list-sublist-header-topics-title">Carrière</span></a>
+									<span class="view-all">Retour<i class="icon" data-icon="6"></i></span>
+								</div>
+								<ul class="nav-list-sublist">
+									<li class="nav-list-sublist-item"><a href="https://www.lemagit.fr/ressources/Formation">Formation</a></li>
+									<li class="nav-list-sublist-item"><a href="https://www.lemagit.fr/ressources/Recrutement">Recrutement</a></li>
+									<li class="nav-list-sublist-item"><a href="https://www.lemagit.fr/ressources/Remuneration">Rémunération</a></li>
+									</ul>
+							</div>
+						<div class="nav-list-child-topics" id="child-topic-b59d7ec12535f310VgnVCM1000000d01c80aRCRD">
+								<div class="nav-list-sublist-header nav-list-sublist-header-topics">
+									<a href="https://www.lemagit.fr/ressources/Datacenter"><span class="nav-list-sublist-header-topics-title">Datacenter</span></a>
+									<span class="view-all">Retour<i class="icon" data-icon="6"></i></span>
+								</div>
+								<ul class="nav-list-sublist">
+									<li class="nav-list-sublist-item"><a href="https://www.lemagit.fr/ressources/Administration-de-systemes">Administration systèmes</a></li>
+									<li class="nav-list-sublist-item"><a href="https://www.lemagit.fr/ressources/Administration-et-supervision-du-Cloud">Administration du Cloud</a></li>
+									<li class="nav-list-sublist-item"><a href="https://www.lemagit.fr/ressources/Architectures-de-Datacenters">Architecture de Datacenter</a></li>
+									<li class="nav-list-sublist-item"><a href="https://www.lemagit.fr/ressources/Continuite-dactivite">Continuité d’activité</a></li>
+									<li class="nav-list-sublist-item"><a href="https://www.lemagit.fr/ressources/Gestion-et-administration-du-Datacenter">Gestion du Datacenter</a></li>
+									<li class="nav-list-sublist-item"><a href="https://www.lemagit.fr/ressources/Green-IT">Green IT</a></li>
+									<li class="nav-list-sublist-item"><a href="https://www.lemagit.fr/ressources/HPC">HPC</a></li>
+									<li class="nav-list-sublist-item"><a href="https://www.lemagit.fr/resources/Infrastructure-hyperconvergee">Infrastructure hyperconvergée</a></li>
+									</ul>
+							</div>
+						<div class="nav-list-child-topics" id="child-topic-339d7ec12535f310VgnVCM1000000d01c80aRCRD">
+								<div class="nav-list-sublist-header nav-list-sublist-header-topics">
+									<a href="https://www.lemagit.fr/ressources/Economie"><span class="nav-list-sublist-header-topics-title">Economie</span></a>
+									<span class="view-all">Retour<i class="icon" data-icon="6"></i></span>
+								</div>
+								<ul class="nav-list-sublist">
+									<li class="nav-list-sublist-item"><a href="https://www.lemagit.fr/ressources/Constructeurs">Constructeurs</a></li>
+									<li class="nav-list-sublist-item"><a href="https://www.lemagit.fr/ressources/Editeurs">Editeurs</a></li>
+									<li class="nav-list-sublist-item"><a href="https://www.lemagit.fr/ressources/Equipementiers">Equipementiers</a></li>
+									<li class="nav-list-sublist-item"><a href="https://www.lemagit.fr/resources/Fournisseurs-Cloud">Fournisseurs Cloud</a></li>
+									<li class="nav-list-sublist-item"><a href="https://www.lemagit.fr/ressources/Operateurs-et-integrateurs-reseaux">Opérateurs, Intégrateurs</a></li>
+									<li class="nav-list-sublist-item"><a href="https://www.lemagit.fr/ressources/SSII">SSII</a></li>
+									</ul>
+							</div>
+						<div class="nav-list-child-topics" id="child-topic-379d7ec12535f310VgnVCM1000000d01c80aRCRD">
+								<div class="nav-list-sublist-header nav-list-sublist-header-topics">
+									<a href="https://www.lemagit.fr/ressources/Gestion-des-donnees"><span class="nav-list-sublist-header-topics-title">Gestion des données</span></a>
+									<span class="view-all">Retour<i class="icon" data-icon="6"></i></span>
+								</div>
+								<ul class="nav-list-sublist">
+									<li class="nav-list-sublist-item"><a href="https://www.lemagit.fr/ressources/Base-de-donnees">Base de données</a></li>
+									<li class="nav-list-sublist-item"><a href="https://www.lemagit.fr/ressources/Big-Data">Big Data</a></li>
+									<li class="nav-list-sublist-item"><a href="https://www.lemagit.fr/ressources/Datawarehouse">Datawarehouse</a></li>
+									<li class="nav-list-sublist-item"><a href="https://www.lemagit.fr/ressources/Formats-et-archivage">Formats et archivage</a></li>
+									<li class="nav-list-sublist-item"><a href="https://www.lemagit.fr/ressources/Internet-et-Intranets">Internet et Intranets </a></li>
+									<li class="nav-list-sublist-item"><a href="https://www.lemagit.fr/ressources/MDM-Gouvernance-Qualite">MDM, Gouvernance, Qualité</a></li>
+									<li class="nav-list-sublist-item"><a href="https://www.lemagit.fr/ressources/Outils-decisionnels-et-analytiques">Décisionnel, Analytique</a></li>
+									</ul>
+							</div>
+						<div class="nav-list-child-topics" id="child-topic-10e982b7d3857510VgnVCM100000ef01c80aRCRD">
+								<div class="nav-list-sublist-header nav-list-sublist-header-topics">
+									<a href="https://www.lemagit.fr/resources/Middleware-et-Developpement"><span class="nav-list-sublist-header-topics-title">Middleware et Développement</span></a>
+									<span class="view-all">Retour<i class="icon" data-icon="6"></i></span>
+								</div>
+								<ul class="nav-list-sublist">
+									<li class="nav-list-sublist-item"><a href="https://www.lemagit.fr/resources/API">API</a></li>
+									<li class="nav-list-sublist-item"><a href="https://www.lemagit.fr/ressources/Architectures-logicielles-SOA">SOA</a></li>
+									<li class="nav-list-sublist-item"><a href="https://www.lemagit.fr/ressources/BPM">BPM</a></li>
+									<li class="nav-list-sublist-item"><a href="https://www.lemagit.fr/resources/DevOps-et-Agilite">DevOps et Agilité</a></li>
+									<li class="nav-list-sublist-item"><a href="https://www.lemagit.fr/ressources/Langages">Langages</a></li>
+									<li class="nav-list-sublist-item"><a href="https://www.lemagit.fr/ressources/Middleware">Middleware</a></li>
+									<li class="nav-list-sublist-item"><a href="https://www.lemagit.fr/ressources/Open-Source">Open Source</a></li>
+									<li class="nav-list-sublist-item"><a href="https://www.lemagit.fr/ressources/Outils-de-developpement">Outils de développement</a></li>
+									</ul>
+							</div>
+						<div class="nav-list-child-topics" id="child-topic-cccd7ec12535f310VgnVCM1000000d01c80aRCRD">
+								<div class="nav-list-sublist-header nav-list-sublist-header-topics">
+									<a href="https://www.lemagit.fr/ressources/Mobilite"><span class="nav-list-sublist-header-topics-title">Mobilité</span></a>
+									<span class="view-all">Retour<i class="icon" data-icon="6"></i></span>
+								</div>
+								<ul class="nav-list-sublist">
+									<li class="nav-list-sublist-item"><a href="https://www.lemagit.fr/resources/Applications-mobiles">Applications mobiles</a></li>
+									<li class="nav-list-sublist-item"><a href="https://www.lemagit.fr/resources/Gestion-des-applications-et-terminaux">Gestion des applications et terminaux</a></li>
+									<li class="nav-list-sublist-item"><a href="https://www.lemagit.fr/resources/OS-mobile">OS mobile</a></li>
+									</ul>
+							</div>
+						<div class="nav-list-child-topics" id="child-topic-b79d7ec12535f310VgnVCM1000000d01c80aRCRD">
+								<div class="nav-list-sublist-header nav-list-sublist-header-topics">
+									<a href="https://www.lemagit.fr/ressources/Poste-de-travail"><span class="nav-list-sublist-header-topics-title">Poste de travail</span></a>
+									<span class="view-all">Retour<i class="icon" data-icon="6"></i></span>
+								</div>
+								<ul class="nav-list-sublist">
+									<li class="nav-list-sublist-item"><a href="https://www.lemagit.fr/ressources/Administration-des-postes-de-travail">Administration PC et Mobiles</a></li>
+									<li class="nav-list-sublist-item"><a href="https://www.lemagit.fr/ressources/Internet-et-outils-Web">Internet et outils Web</a></li>
+									<li class="nav-list-sublist-item"><a href="https://www.lemagit.fr/ressources/PC-portables-et-peripheriques">PC</a></li>
+									<li class="nav-list-sublist-item"><a href="https://www.lemagit.fr/ressources/Virtualisation-du-poste-de-travail">Virtualisation, VDI</a></li>
+									</ul>
+							</div>
+						<div class="nav-list-child-topics" id="child-topic-389d7ec12535f310VgnVCM1000000d01c80aRCRD">
+								<div class="nav-list-sublist-header nav-list-sublist-header-topics">
+									<a href="https://www.lemagit.fr/ressources/Reseaux-telecoms"><span class="nav-list-sublist-header-topics-title">Réseaux &amp; télécoms</span></a>
+									<span class="view-all">Retour<i class="icon" data-icon="6"></i></span>
+								</div>
+								<ul class="nav-list-sublist">
+									<li class="nav-list-sublist-item"><a href="https://www.lemagit.fr/ressources/Administration-de-reseaux">Administration de réseaux</a></li>
+									<li class="nav-list-sublist-item"><a href="https://www.lemagit.fr/ressources/Haut-debit-Acces-Internet">Haut débit Accès Internet</a></li>
+									<li class="nav-list-sublist-item"><a href="https://www.lemagit.fr/ressources/LAN-WLAN">LAN - WLAN</a></li>
+									<li class="nav-list-sublist-item"><a href="https://www.lemagit.fr/ressources/RFID-et-Internet-des-objets">Internet des objets</a></li>
+									<li class="nav-list-sublist-item"><a href="https://www.lemagit.fr/ressources/SDN-Virtualisation-de-reseaux">SDN</a></li>
+									<li class="nav-list-sublist-item"><a href="https://www.lemagit.fr/ressources/ToIP-VoIP">ToIP - VoIP</a></li>
+									<li class="nav-list-sublist-item"><a href="https://www.lemagit.fr/ressources/Telephonie-mobile">Téléphonie mobile</a></li>
+									<li class="nav-list-sublist-item"><a href="https://www.lemagit.fr/ressources/WAN-VPN-SDWAN">WAN - VPN - SDWAN</a></li>
+									</ul>
+							</div>
+						<div class="nav-list-child-topics" id="child-topic-349d7ec12535f310VgnVCM1000000d01c80aRCRD">
+								<div class="nav-list-sublist-header nav-list-sublist-header-topics">
+									<a href="https://www.lemagit.fr/ressources/Secteur-dactivite"><span class="nav-list-sublist-header-topics-title">Secteur d'activité</span></a>
+									<span class="view-all">Retour<i class="icon" data-icon="6"></i></span>
+								</div>
+								<ul class="nav-list-sublist">
+									<li class="nav-list-sublist-item"><a href="https://www.lemagit.fr/ressources/Industrie-et-distribution">Industrie et distribution</a></li>
+									<li class="nav-list-sublist-item"><a href="https://www.lemagit.fr/ressources/Secteur-public">Secteur public</a></li>
+									<li class="nav-list-sublist-item"><a href="https://www.lemagit.fr/ressources/Services">Services</a></li>
+									</ul>
+							</div>
+						<div class="nav-list-child-topics" id="child-topic-369d7ec12535f310VgnVCM1000000d01c80aRCRD">
+								<div class="nav-list-sublist-header nav-list-sublist-header-topics">
+									<a href="https://www.lemagit.fr/ressources/Serveurs"><span class="nav-list-sublist-header-topics-title">Serveurs</span></a>
+									<span class="view-all">Retour<i class="icon" data-icon="6"></i></span>
+								</div>
+								<ul class="nav-list-sublist">
+									<li class="nav-list-sublist-item"><a href="https://www.lemagit.fr/resources/ARM">ARM</a></li>
+									<li class="nav-list-sublist-item"><a href="https://www.lemagit.fr/ressources/Mainframes">Mainframes</a></li>
+									<li class="nav-list-sublist-item"><a href="https://www.lemagit.fr/ressources/Processeurs-et-composants">Processeurs et composants</a></li>
+									<li class="nav-list-sublist-item"><a href="https://www.lemagit.fr/ressources/Unix-Risc-et-Itanium">Unix (Risc et Itanium)</a></li>
+									<li class="nav-list-sublist-item"><a href="https://www.lemagit.fr/ressources/x86">x86</a></li>
+									</ul>
+							</div>
+						<div class="nav-list-child-topics" id="child-topic-3a9d7ec12535f310VgnVCM1000000d01c80aRCRD">
+								<div class="nav-list-sublist-header nav-list-sublist-header-topics">
+									<a href="https://www.lemagit.fr/ressources/Services-Cloud"><span class="nav-list-sublist-header-topics-title">Services Cloud</span></a>
+									<span class="view-all">Retour<i class="icon" data-icon="6"></i></span>
+								</div>
+								<ul class="nav-list-sublist">
+									<li class="nav-list-sublist-item"><a href="https://www.lemagit.fr/resources/Applications-et-services">Applications et services</a></li>
+									<li class="nav-list-sublist-item"><a href="https://www.lemagit.fr/ressources/IaaS">IaaS</a></li>
+									<li class="nav-list-sublist-item"><a href="https://www.lemagit.fr/ressources/PaaS">PaaS</a></li>
+									<li class="nav-list-sublist-item"><a href="https://www.lemagit.fr/ressources/SaaS">SaaS</a></li>
+									</ul>
+							</div>
+						<div class="nav-list-child-topics" id="child-topic-b49d7ec12535f310VgnVCM1000000d01c80aRCRD">
+								<div class="nav-list-sublist-header nav-list-sublist-header-topics">
+									<a href="https://www.lemagit.fr/ressources/Services-IT"><span class="nav-list-sublist-header-topics-title">Services IT</span></a>
+									<span class="view-all">Retour<i class="icon" data-icon="6"></i></span>
+								</div>
+								<ul class="nav-list-sublist">
+									<li class="nav-list-sublist-item"><a href="https://www.lemagit.fr/ressources/BPO">BPO</a></li>
+									<li class="nav-list-sublist-item"><a href="https://www.lemagit.fr/resources/Cloud">Cloud</a></li>
+									<li class="nav-list-sublist-item"><a href="https://www.lemagit.fr/ressources/Developpement-maintenance-et-recette">Maintenance logicielle</a></li>
+									<li class="nav-list-sublist-item"><a href="https://www.lemagit.fr/ressources/Externalisation">Externalisation</a></li>
+									<li class="nav-list-sublist-item"><a href="https://www.lemagit.fr/ressources/Gestion-de-projet">Gestion de projet</a></li>
+									<li class="nav-list-sublist-item"><a href="https://www.lemagit.fr/ressources/Gouvernance-et-qualite-Itil">Gouvernance, ITIL</a></li>
+									<li class="nav-list-sublist-item"><a href="https://www.lemagit.fr/ressources/Inde">Inde</a></li>
+									<li class="nav-list-sublist-item"><a href="https://www.lemagit.fr/ressources/Infogerance-dexploitation">Infogérance</a></li>
+									<li class="nav-list-sublist-item"><a href="https://www.lemagit.fr/ressources/Offshore">Offshore</a></li>
+									<li class="nav-list-sublist-item"><a href="https://www.lemagit.fr/ressources/Optimisation-des-couts">Optimisation des coûts</a></li>
+									<li class="nav-list-sublist-item"><a href="https://www.lemagit.fr/ressources/Relation-fournisseurs-et-SSII">SSII</a></li>
+									</ul>
+							</div>
+						<div class="nav-list-child-topics" id="child-topic-399d7ec12535f310VgnVCM1000000d01c80aRCRD">
+								<div class="nav-list-sublist-header nav-list-sublist-header-topics">
+									<a href="https://www.lemagit.fr/ressources/Stockage"><span class="nav-list-sublist-header-topics-title">Stockage</span></a>
+									<span class="view-all">Retour<i class="icon" data-icon="6"></i></span>
+								</div>
+								<ul class="nav-list-sublist">
+									<li class="nav-list-sublist-item"><a href="https://www.lemagit.fr/ressources/Administration-du-stockage">Administration du stockage</a></li>
+									<li class="nav-list-sublist-item"><a href="https://www.lemagit.fr/ressources/Archivage">Archivage</a></li>
+									<li class="nav-list-sublist-item"><a href="https://www.lemagit.fr/ressources/Backup-en-Cloud">Backup en Cloud</a></li>
+									<li class="nav-list-sublist-item"><a href="https://www.lemagit.fr/ressources/Backup-et-protection-de-donnees">Backup</a></li>
+									<li class="nav-list-sublist-item"><a href="https://www.lemagit.fr/resources/Flash">Flash</a></li>
+									<li class="nav-list-sublist-item"><a href="https://www.lemagit.fr/ressources/Protection-des-donnees">Protection des données</a></li>
+									<li class="nav-list-sublist-item"><a href="https://www.lemagit.fr/ressources/SAN-et-NAS">SAN et NAS</a></li>
+									<li class="nav-list-sublist-item"><a href="https://www.lemagit.fr/resources/Software-Defined-Storage">Software Defined Storage</a></li>
+									<li class="nav-list-sublist-item"><a href="https://www.lemagit.fr/ressources/Stockage-en-Cloud">Stockage en Cloud</a></li>
+									<li class="nav-list-sublist-item"><a href="https://www.lemagit.fr/ressources/Stockage-objet">Stockage objet</a></li>
+									<li class="nav-list-sublist-item"><a href="https://www.lemagit.fr/ressources/Virtualisation-du-stockage">Virtualisation du stockage</a></li>
+									</ul>
+							</div>
+						<div class="nav-list-child-topics" id="child-topic-b99d7ec12535f310VgnVCM1000000d01c80aRCRD">
+								<div class="nav-list-sublist-header nav-list-sublist-header-topics">
+									<a href="https://www.lemagit.fr/ressources/Systemes-dexploitation"><span class="nav-list-sublist-header-topics-title">Systèmes d'exploitation</span></a>
+									<span class="view-all">Retour<i class="icon" data-icon="6"></i></span>
+								</div>
+								<ul class="nav-list-sublist">
+									<li class="nav-list-sublist-item"><a href="https://www.lemagit.fr/ressources/Linux">Linux</a></li>
+									<li class="nav-list-sublist-item"><a href="https://www.lemagit.fr/ressources/MacOS">MacOS</a></li>
+									<li class="nav-list-sublist-item"><a href="https://www.lemagit.fr/ressources/Solaris">Solaris</a></li>
+									<li class="nav-list-sublist-item"><a href="https://www.lemagit.fr/ressources/Unix">Unix</a></li>
+									<li class="nav-list-sublist-item"><a href="https://www.lemagit.fr/ressources/Windows">Windows</a></li>
+									<li class="nav-list-sublist-item"><a href="https://www.lemagit.fr/ressources/zOS">zOS</a></li>
+									</ul>
+							</div>
+						<div class="nav-list-child-topics" id="child-topic-b89d7ec12535f310VgnVCM1000000d01c80aRCRD">
+								<div class="nav-list-sublist-header nav-list-sublist-header-topics">
+									<a href="https://www.lemagit.fr/ressources/Securite"><span class="nav-list-sublist-header-topics-title">Sécurité</span></a>
+									<span class="view-all">Retour<i class="icon" data-icon="6"></i></span>
+								</div>
+								<ul class="nav-list-sublist">
+									<li class="nav-list-sublist-item"><a href="https://www.lemagit.fr/ressources/Authentification-et-signature-electronique">Authentification</a></li>
+									<li class="nav-list-sublist-item"><a href="https://www.lemagit.fr/ressources/Cybercriminalite">Cybercriminalité</a></li>
+									<li class="nav-list-sublist-item"><a href="https://www.lemagit.fr/ressources/Cyberdefense">Cyberdéfense</a></li>
+									<li class="nav-list-sublist-item"><a href="https://www.lemagit.fr/ressources/Gestion-de-la-securite">Gestion de la sécurité</a></li>
+									<li class="nav-list-sublist-item"><a href="https://www.lemagit.fr/resources/Gestion-des-vulnerabilites">Gestion des vulnérabilités</a></li>
+									<li class="nav-list-sublist-item"><a href="https://www.lemagit.fr/ressources/Gestion-didentites">Gestion d’identités</a></li>
+									<li class="nav-list-sublist-item"><a href="https://www.lemagit.fr/ressources/Legislation">Législation</a></li>
+									<li class="nav-list-sublist-item"><a href="https://www.lemagit.fr/ressources/Menaces-informatiques">Menaces informatiques</a></li>
+									<li class="nav-list-sublist-item"><a href="https://www.lemagit.fr/ressources/Protection-du-poste-de-travail">Protection du PC</a></li>
+									<li class="nav-list-sublist-item"><a href="https://www.lemagit.fr/ressources/Securite-des-environnements-virtuels">Environnements virtuels</a></li>
+									<li class="nav-list-sublist-item"><a href="https://www.lemagit.fr/ressources/Securite-du-Cloud">Sécurité du Cloud</a></li>
+									<li class="nav-list-sublist-item"><a href="https://www.lemagit.fr/ressources/Securite-reseau">Sécurité réseau</a></li>
+									</ul>
+							</div>
+						<div class="nav-list-child-topics" id="child-topic-b69d7ec12535f310VgnVCM1000000d01c80aRCRD">
+								<div class="nav-list-sublist-header nav-list-sublist-header-topics">
+									<a href="https://www.lemagit.fr/ressources/Virtualisation-de-serveurs"><span class="nav-list-sublist-header-topics-title">Virtualisation de serveurs</span></a>
+									<span class="view-all">Retour<i class="icon" data-icon="6"></i></span>
+								</div>
+								<ul class="nav-list-sublist">
+									<li class="nav-list-sublist-item"><a href="https://www.lemagit.fr/ressources/Architectures-virtualisees">Architectures virtualisées</a></li>
+									<li class="nav-list-sublist-item"><a href="https://www.lemagit.fr/ressources/Backup-et-reprise-apres-desastre">Backup, PRA</a></li>
+									<li class="nav-list-sublist-item"><a href="https://www.lemagit.fr/resources/Conteneurs">Conteneurs</a></li>
+									<li class="nav-list-sublist-item"><a href="https://www.lemagit.fr/ressources/Hyperviseurs">Hyperviseurs</a></li>
+									</ul>
+							</div>
+						<div class="nav-list-parent-topics">
+							<div class="nav-list-sublist-header nav-list-sublist-header-gray">Sélectionner une technologie</div>
+							<ul class="nav-list-sublist">
+								<li class="nav-list-sublist-item" id="parent-topic-359d7ec12535f310VgnVCM1000000d01c80aRCRD">Applications d'entreprise</li>
+								<li class="nav-list-sublist-item" id="parent-topic-b39d7ec12535f310VgnVCM1000000d01c80aRCRD">Carrière</li>
+								<li class="nav-list-sublist-item" id="parent-topic-b59d7ec12535f310VgnVCM1000000d01c80aRCRD">Datacenter</li>
+								<li class="nav-list-sublist-item" id="parent-topic-339d7ec12535f310VgnVCM1000000d01c80aRCRD">Economie</li>
+								<li class="nav-list-sublist-item" id="parent-topic-379d7ec12535f310VgnVCM1000000d01c80aRCRD">Gestion des données</li>
+								<li class="nav-list-sublist-item" id="parent-topic-10e982b7d3857510VgnVCM100000ef01c80aRCRD">Middleware et Développement</li>
+								<li class="nav-list-sublist-item" id="parent-topic-cccd7ec12535f310VgnVCM1000000d01c80aRCRD">Mobilité</li>
+								<li class="nav-list-sublist-item" id="parent-topic-b79d7ec12535f310VgnVCM1000000d01c80aRCRD">Poste de travail</li>
+								<li class="nav-list-sublist-item" id="parent-topic-389d7ec12535f310VgnVCM1000000d01c80aRCRD">Réseaux &amp; télécoms</li>
+								<li class="nav-list-sublist-item" id="parent-topic-349d7ec12535f310VgnVCM1000000d01c80aRCRD">Secteur d'activité</li>
+								<li class="nav-list-sublist-item" id="parent-topic-369d7ec12535f310VgnVCM1000000d01c80aRCRD">Serveurs</li>
+								<li class="nav-list-sublist-item" id="parent-topic-3a9d7ec12535f310VgnVCM1000000d01c80aRCRD">Services Cloud</li>
+								<li class="nav-list-sublist-item" id="parent-topic-b49d7ec12535f310VgnVCM1000000d01c80aRCRD">Services IT</li>
+								<li class="nav-list-sublist-item" id="parent-topic-399d7ec12535f310VgnVCM1000000d01c80aRCRD">Stockage</li>
+								<li class="nav-list-sublist-item" id="parent-topic-b99d7ec12535f310VgnVCM1000000d01c80aRCRD">Systèmes d'exploitation</li>
+								<li class="nav-list-sublist-item" id="parent-topic-b89d7ec12535f310VgnVCM1000000d01c80aRCRD">Sécurité</li>
+								<li class="nav-list-sublist-item" id="parent-topic-b69d7ec12535f310VgnVCM1000000d01c80aRCRD">Virtualisation de serveurs</li>
+								</ul>
+						</div>
+					</div>
+				</div>
+			</li>
+			<li class="nav-list-item nav-list-item-lemag" id="premiumContentMenu">
+				<div class="nav-list-item-header">
+					<span class="nav-list-item-header-title">Contenu Premium <em>Pro+</em></span>
+					 <i class="icon icon-arrow-down" data-icon="5"></i><i class="icon icon-navigation-arrow" data-icon="B"></i>
+				</div>
+				<div class="nav-list-sublist nav-list-item-dropdown">
+					<ul class="nav-list-item-jscroll">
+						<li class="nav-list-sublist-item"><a href="https://www.lemagit.fr/ehandbooks">E-handbooks</a></li>
+						<li class="nav-list-sublist-item"><a href="https://www.lemagit.fr/ezines">E-zines</a></li>
+						<li class="nav-list-sublist-item"><a href="https://www.bitpipe.fr/">Livres Blancs</a></li>
+						<li class="nav-list-sublist-item"><a href="https://www.lemagit.fr/eproducts">Tout PRO+</a></li>
+						<li class="nav-list-sublist-item"><a href="https://users.lemagit.fr/registration/LeMagIT/EditProfile.page">A propos de PRO+</a></li>
+						<li class="nav-list-sublist-item sponsored">
+								<a href="https://www.lemagit.fr/espace_partenaires">Espace partenaires</a>
+							</li>
+						</ul>
+				</div>
+			</li>
+		</ul>
+		<ul class="nav-social">
+				<li class="nav-social-item title">Suivez-nous:</li>
+				<li class="nav-social-item" title="Aimer LeMagIT sur Facebook" id="navBarFacebook"><a href="https://www.facebook.com/LeMagIT" target="_blank"><i class="icon" data-icon="u"></i></a></li><li class="nav-social-item" title="Suivre @lemagit sur Twitter" id="navBarTwitter"><a href="https://twitter.com/lemagit" target="_blank"><i class="icon" data-icon="c"></i></a></li><li class="nav-social-item" title="Suivre LeMagIT sur LinkedIn" id="navBarLinkedIn"><a href="https://www.linkedin.com/company/2899503" target="_blank"><i class="icon" data-icon="o"></i></a></li></ul>
+		</nav>
+</header>
+
+<div class="ad-wrapper header-leaderboard ad-desktop" style="position: inherit; z-index: 99; width: 100%; background-color: rgb(241, 241, 241); top: auto;">
+	<!-- AdsController, generated at 12:50:03 Sun Oct 27, 2019, by cds6 -->
+<div id="leaderboard" class="ad ad-lb"><script>GPT.display('leaderboard')</script></div></div>
+<div id="main-content" class="main-content">
+			<article id="content-columns" class="content-columns">
+				<!-- ContentItemController, generated at 21:33:28 Sun Oct 27, 2019, by cds6 -->
+<div class="main-guide-hero-header parent-hero-header">
+<div class="main-guide-hero-header-left full-width">	
+		<i class="icon essential_guide"></i>
+		<h3>Guides Essentiels</h3>
+	</div>
+</div>
+<header class="article-guide-header parent-header" id="content-header">
+	<h1 class="main-article-title">Comprendre le Machine Learning</h1>
+	
+	<ul class="main-article-share-counts">
+		<li class="main-article-share-count inline-social-icons inline cboxElement" title="Partager" href="#social-icons-desktop">
+			<i class="icon" data-icon="f"></i>
+			<span></span>
+		</li>
+	</ul>
+	
+	<div class="ad-wrapper page-header-ad ad-desktop">
+		<!-- AdsController, generated at 21:33:28 Sun Oct 27, 2019, by cds6 -->
+<div id="mu-top" class="ad ad-mu"><script>GPT.display('mu-top')</script></div></div>
+	<h2 class="main-article-subtitle"><p>
+		</p><img src="./Comprendre le Machine Learning_files/MachineLearning.jpg"><p>
+		Le Machine Learning, s’appuie sur des raisonnements mathématiques, traduits informatiquement dans des algorithmes capables de digérer de grandes quantités d’informations pour acquérir de nouvelles connaissances ou encore comprendre un comportement. Ce dossier, consacré à cette forme d’Intelligence Artificielle de plus en plus répandue, vise à mieux la comprendre pour vous aider à mieux l'exploiter dans votre activité. </p></h2>
+</header><div id="content-left" class="content-left">
+					<div class="locking-full-bar">
+	<div class="locking-left-bar" style="position: relative;">
+		<!-- ChaptersBarController, generated at 12:51:25 Sun Oct 27, 2019, by cds6 -->
+<nav id="chapters-bar-menu" class="chapters-bar desktop-chapters-bar" style="-webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); touch-action: none;">
+	<div class="chapters-bar-header">
+		<i class="icon" data-icon="1"></i>Dans cette Technologies</div>
+	<ul class="chapters-bar-list"><li class="chapters-bar-item selected"><a href="https://www.lemagit.fr/essentialguide/Comprendre-le-Machine-Learning#">Introduction</a></li><li class="chapters-bar-item"><a href="https://www.lemagit.fr/essentialguide/Comprendre-le-Machine-Learning#">Le Machine Learning expliqué</a></li><li class="chapters-bar-item"><a href="https://www.lemagit.fr/essentialguide/Comprendre-le-Machine-Learning#">Le Marché</a></li><li class="chapters-bar-item"><a href="https://www.lemagit.fr/essentialguide/Comprendre-le-Machine-Learning#">La technologie</a></li><li class="chapters-bar-item"><a href="https://www.lemagit.fr/essentialguide/Comprendre-le-Machine-Learning#">Ils ont basculé</a></li></ul>
+</nav><!-- SocialMediaShareBarController, generated at 18:29:34 Sun Oct 27, 2019, by cds6 -->
+<div id="rail-share-bar">
+		<ul id="social-icons-desktop" class="share-bar-desktop">
+		<aside id="social-icons-desktop">
+			<li class="share-bar-item-desktop share-bar-title">Partager avec votre réseau:</li>
+			<li class="share-bar-item-desktop socialMedia-facebook" title="Partager sur Facebook" data-socialsite="facebook">
+					<a href="https://www.lemagit.fr/essentialguide/Comprendre-le-Machine-Learning#" target="_blank"><i class="icon" data-icon="u"></i></a>
+					<span class="count"></span>
+				</li>
+			<li class="share-bar-item-desktop socialMedia-twitter" title="Partager sur Twitter" data-socialsite="twitter" data-account="lemagit" data-related="">
+					<a href="https://www.lemagit.fr/essentialguide/Comprendre-le-Machine-Learning#" target="_blank"><i class="icon" data-icon="c"></i></a>
+					<span class="count"></span>
+				</li>
+			<li class="share-bar-item-desktop socialMedia-linkedin" title="Partager sur LinkedIn" data-socialsite="linkedin">
+					<a href="https://www.lemagit.fr/essentialguide/Comprendre-le-Machine-Learning#" target="_blank"><i class="icon" data-icon="o"></i></a>
+					<span class="count"></span>
+				</li>
+			<li class="share-bar-item-desktop socialMedia-flipboard" title="Partager sur Flipboard" data-socialsite="flipboard">
+					<a data-flip-widget="shareflip" href="https://share.flipboard.com/bookmarklet/popout?v=2&amp;title=Comprendre%20le%20Machine%20Learning&amp;url=https%3A%2F%2Fwww.lemagit.fr%2Fessentialguide%2FComprendre-le-Machine-Learning&amp;t=1572235572896&amp;utm_campaign=tools&amp;utm_medium=article-share&amp;utm_source=www.lemagit.fr"><i class="icon flipboard"></i></a>
+					<script src="./Comprendre le Machine Learning_files/flbuttons.min.js.téléchargement" type="text/javascript"></script>
+				</li>
+			<li class="share-bar-item-desktop contentTools-email" title="Envoyer à un ami">
+				<a href="https://api.addthis.com/oexchange/0.8/forward/email/offer?pubid=uxtechtarget&amp;url=https%3A%2F%2Fwww.lemagit.fr%2Fessentialguide%2FComprendre-le-Machine-Learning&amp;title=Comprendre+le+Machine+Learning&amp;email_template=&amp;ct=1" target="_blank"><i class="icon" data-icon="n"></i></a>
+			</li>
+		</aside>
+		</ul>
+	</div>
+</div>
+	<aside class="resources-bar desktop-resources-bar" id="resources-bar" style="position: absolute; margin-top: 80px;">
+			<!-- VendorResourcesController, generated at 21:33:28 Sun Oct 27, 2019, by cds6 -->
+<div class="resources-bar-header"><i class="icon" data-icon="l"></i>Actualités sponsorisées</div>
+			<ul class="resources-bar-list sponsored-news">
+				<li class="resources-bar-item">
+						<a href="https://www.lemagit.fr/SD-WAN/Lautomatisation-atout-numero-1-du-SD-WAN">L’automatisation, atout numéro 1 du SD-WAN</a>
+						<span>–Silverpeak</span>
+					</li>
+				<li class="resources-bar-item">
+						<a href="https://www.lemagit.fr/SD-WAN/Comment-bien-securiser-son-SD-WAN">Comment bien sécuriser son SD-WAN</a>
+						<span>–Silverpeak</span>
+					</li>
+				<li class="resources-bar-item see-more"><a href="https://www.lemagit.fr/espace_partenaires">Voir plus</a></li>
+				</ul>
+		<div class="resources-bar-header"><i class="icon" data-icon="l"></i>Ressources Partenaire</div>
+		<ul class="resources-bar-list" id="vendorResourcesSplash">
+			<li class="resources-bar-item">
+					<a href="https://www.bitpipe.fr/detail/RES/1508754092_124.html">Les clés de l'IT : Collaboration Unifiée</a>
+					<span>–LeMagIT</span>
+					<i class="icon" data-icon="7"></i>
+				</li>
+			<li class="resources-bar-item">
+					<a href="https://www.bitpipe.fr/detail/RES/1504104683_121.html">Les clés de l'IT : Spécial Virtualisation</a>
+					<span>–LeMagIT</span>
+					<i class="icon" data-icon="7"></i>
+				</li>
+			</ul>
+<!-- LatestContentController, generated at 21:33:28 Sun Oct 27, 2019, by cds6 -->
+<div class="resources-bar-header"><i class="icon" data-icon="2"></i>Actualités</div>
+	<ul class="resources-bar-list latest-news">
+	<li class="resources-bar-item">
+			<a href="https://www.lemagit.fr/actualites/252472871/AWS-soutient-le-langage-de-programmation-systeme-Rust">AWS soutient à son tour le langage de programmation Rust</a>
+		</li>
+	<li class="resources-bar-item">
+			<a href="https://www.lemagit.fr/actualites/252472866/Google-debauche-un-ancien-patron-dOffice-365-pour-sa-G-Suite">Google débauche un ancien patron d’Office&nbsp;365 pour sa G Suite</a>
+		</li>
+	<li class="resources-bar-item">
+			<a href="https://www.lemagit.fr/actualites/252472826/Open-Model-Manager-SAS-se-tourne-vers-lopen-source">Open Model Manager : SAS se tourne vers l’open source</a>
+		</li>
+	<li class="resources-bar-item see-more">
+			<a href="https://www.lemagit.fr/actualites" class="button blue-button">Voir tous Nouvelles</a>
+		</li>
+	</ul>
+<!-- RecentEProductsController, generated at 21:33:28 Sun Oct 27, 2019, by cds6 -->
+<div class="resources-bar-header ezine-header"><i class="icon" data-icon="2"></i>
+	Télécharger Information Sécurité</div>
+<ul class="resources-bar-list ezine">
+	<li class="resources-bar-item">
+		<a href="https://www.lemagit.fr/ezine/Information-Securite/Information-securite-11-Mobiles-des-menaces-reelles-loin-detre-des-cas-isoles"><img src="./Comprendre le Machine Learning_files/CoverEzin11sec.jpg"></a>
+		<span class="ezine-header">Dans ce numéro:</span>
+		<ul>
+		<li>Android Q simplifie encore la gestion des terminaux mobiles</li>
+		<li>iPadOS&nbsp;13&nbsp;: peut-être enfin l’OS qu’attendait l’iPad pour se substituer à l’ordinateur portable</li>
+		</ul>
+		<a href="https://www.lemagit.fr/ezine/Information-Securite/Information-securite-11-Mobiles-des-menaces-reelles-loin-detre-des-cas-isoles" class="button cw-red-button">
+			Télécharger cette édition</a>
+	</li>
+</ul>
+</aside>
+	</div></div>
+				<div id="content-center" class="content-center">
+					<!-- GuideController, generated at 18:18:49 Sun Oct 27, 2019, by cds6 -->
+<div class="float-mask" style=""></div>
+
+
+
+
+
+<ul class="actions-bar">
+	
+	
+	
+	
+	
+			
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		<li class="actions-bar-item actions-bar-chapters" style="-webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); touch-action: none;"><i class="icon" data-icon="1"></i></li>
+	
+	
+		<li class="actions-bar-item actions-bar-resources" style="-webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); touch-action: none;"><i class="icon" data-icon="2"></i></li>
+	
+	
+		<li class="actions-bar-item actions-bar-share"><i class="icon" data-icon="f" style="-webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); touch-action: none;"></i>
+			<ul class="share-bar-mobile">
+			<aside id="social-icons-desktop">
+				
+					<li class="share-bar-item-mobile socialMedia-facebook" title="Partager sur Facebook" data-socialsite="facebook">
+						<a href="https://www.lemagit.fr/essentialguide/Comprendre-le-Machine-Learning#"><i class="icon" data-icon="u"></i></a><span class="count"></span>
+					</li>
+				
+				
+					<li class="share-bar-item-mobile socialMedia-twitter" title="Partager sur Twitter" data-socialsite="twitter" data-account="lemagit" data-related="">
+						<a href="https://www.lemagit.fr/essentialguide/Comprendre-le-Machine-Learning#"><i class="icon" data-icon="c"></i></a><span class="count"></span>
+					</li>
+				
+				
+				
+				
+					<li class="share-bar-item-mobile socialMedia-linkedin" title="Partager sur LinkedIn" data-socialsite="linkedin">
+						<a href="https://www.lemagit.fr/essentialguide/Comprendre-le-Machine-Learning#"><i class="icon" data-icon="o"></i></a><span class="count"></span>
+					</li>	
+				
+				
+					<li class="share-bar-item-desktop socialMedia-flipboard" title="Partager sur Flipboard" data-socialsite="flipboard">
+						<a data-flip-widget="shareflip" href="https://share.flipboard.com/bookmarklet/popout?v=2&amp;title=Comprendre%20le%20Machine%20Learning&amp;url=https%3A%2F%2Fwww.lemagit.fr%2Fessentialguide%2FComprendre-le-Machine-Learning&amp;t=1572235572924&amp;utm_campaign=tools&amp;utm_medium=article-share&amp;utm_source=www.lemagit.fr"><i class="icon flipboard"></i></a>
+						<script src="./Comprendre le Machine Learning_files/flbuttons.min.js.téléchargement" type="text/javascript"></script>
+					</li>
+				
+				<li class="share-bar-item-mobile contentTools-email" title="Envoyer à un ami">
+					<a href="https://api.addthis.com/oexchange/0.8/forward/email/offer?pubid=uxtechtarget&amp;url=https%3A%2F%2Fwww.lemagit.fr%2Fessentialguide%2FComprendre-le-Machine-Learning&amp;title=Comprendre+le+Machine+Learning&amp;email_template=&amp;ct=1"><i class="icon" data-icon="n"></i></a>
+				</li>
+			
+			</aside>
+			</ul>
+		</li>
+	
+</ul><section id="introduction" class="section guide-section" data-menu-title="Introduction">
+	<h3 class="section-title">
+		Introduction</h3>
+	<p>&nbsp;Il habite probablement une application que vous utilisez au quotidien. Son nom&nbsp;? <a href="https://whatis.techtarget.com/fr/definition/Machine-Learning">Le Machine Learning</a>. Comprendre, l’apprentissage automatisé. L’une des formes de l’intelligence artificielle la plus répandue à ce jour, le Machine Learning s’appuie sur des raisonnements mathématiques, traduits informatiquement dans les algorithmes, capables de digérer de grandes quantités d’informations pour acquérir de nouvelles connaissances ou encore comprendre un comportement. Le principe du Machine Learning est justement de pouvoir apprendre en toute autonomie à partir de ces données et d’évoluer de façon récursive en permanence.</p>
+<p>Ces fonctions d’apprentissage automatique détectent des schémas clé et y ajustent leur fonctionnement. Concrètement, à chaque interaction avec l’application, un clic ou &nbsp;un «&nbsp;like&nbsp;», l’application est capable d’en déduire un comportement et d’ajuster en fonction le contenu proposé et son interface.</p>
+<p>Cette mécanique suscite aujourd’hui beaucoup d’engouement chez les éditeurs, parfois à raison, parfois à outrance, parfois faussement – comme &nbsp;globalement l’Intelligence artificielle.</p>
+<p>Ce guide essentiel vise justement à faire lumière sur les concepts afin de mieux comprendre ce qu’est le Machine Learning et comment fonctionnent les algorithmes qui lui donne vie.</p>
+<p></p>
+<p style="text-align: center;"><a href="https://www.bitpipe.fr/data/document.do?res_id=1519920666_606&amp;Offer=pducellier_EGbutton_comprendre_le_machine_learning"><img src="./Comprendre le Machine Learning_files/EGButtonNew.png" alt="Télécharger gratuitement ce dossier au format PDF" width="264"></a></p></section>
+<section class="section guide-section" id="guideSection1" data-menu-title="Le Machine Learning expliqué">
+		<h3 class="section-title guide-collapse-toggle">
+			<span class="chapter-number">1</span>Le Machine Learning expliqué<span class="toggle-marker">-</span>
+		</h3>
+		<h4 class="section-subtitle">Deep ou Machine Learning ? Cognitif ? IA ?</h4>
+		<p></p>
+		
+		<div class="section-guide-type-wrapper">
+				<div class="section-guide-type-item">
+						<div class="guide-type-item-header">Opinions</div>
+						<div class="guide-type-item-content">
+							<h4><a href="https://www.lemagit.fr/tribune/Machine-Learning-Deep-Learning-AI-Informatique-cognitive-quelles-differences">Machine Learning, Deep Learning, AI, Informatique cognitive : quelles différences ?</a></h4>
+							<img class="guide-content-image" src="./Comprendre le Machine Learning_files/AI-Hero.jpg">
+							<p>Ces termes sont de plus en plus employés par les éditeurs et leurs partenaires. Emmanuel Vignon, Watson Practice Leader chez IBM France revient sur ce que recouvre chacun de ces concepts, et comment ils s’articulent.<a href="https://www.lemagit.fr/tribune/Machine-Learning-Deep-Learning-AI-Informatique-cognitive-quelles-differences"> Lire la suite</a>
+							</p>
+						</div>
+					</div>
+				<div class="section-guide-type-item">
+						<div class="guide-type-item-header">Conseils IT</div>
+						<div class="guide-type-item-content">
+							<h4><a href="https://www.lemagit.fr/conseil/Machine-Learning-vs-Deep-Learning-un-avion-a-helices-et-un-avion-a-reaction">Machine Learning vs Deep Learning ? La même différence qu'entre un ULM et un Airbus A380</a></h4>
+							<img class="guide-content-image" src="./Comprendre le Machine Learning_files/AI-brain-circuit-computer-chip-Getty.jpg">
+							<p>Le Deep Learning partage certaines caractéristiques avec l'apprentissage statistique traditionnel. Mais les utilisateurs expérimentés le considèrent comme une catégorie à part entière avec une conception de modèles prédictifs et des résultats bien différents.<a href="https://www.lemagit.fr/conseil/Machine-Learning-vs-Deep-Learning-un-avion-a-helices-et-un-avion-a-reaction"> Lire la suite</a>
+							</p>
+						</div>
+					</div>
+				</div>
+		</section>
+<div class="ad-wrapper ad-inline">
+				<!-- AdsController, generated at 18:18:49 Sun Oct 27, 2019, by cds6 -->
+<div id="mu-1" class="ad ad-mu"><script>GPT.display('mu-1')</script></div></div>
+		<section class="section guide-section" id="guideSection2" data-menu-title="Le Marché">
+		<h3 class="section-title guide-collapse-toggle">
+			<span class="chapter-number">2</span>Le Marché<span class="toggle-marker">-</span>
+		</h3>
+		<h4 class="section-subtitle">Le Machine Learning dans son contexte</h4>
+		<p></p>
+		
+		<div class="section-guide-type-wrapper">
+				<div class="section-guide-type-item">
+						<div class="guide-type-item-header">Conseils IT</div>
+						<div class="guide-type-item-content">
+							<h4><a href="https://www.lemagit.fr/conseil/LIA-Washing-brouille-le-marche-de-lIntelligence-Artificielle">L’AI Washing brouille le marché de l’Intelligence Artificielle</a></h4>
+							<p>L'Intelligence Artificielle est présentée comme une tendance d’avenir très porteuse. Poussant de nombreux acteurs du secteur à passer à la moulinette AI leurs produits et déroutant quelque peu les clients. « AI Washing » vous avez dit ?<a href="https://www.lemagit.fr/conseil/LIA-Washing-brouille-le-marche-de-lIntelligence-Artificielle"> Lire la suite</a>
+							</p>
+						</div>
+					</div>
+				<div class="section-guide-type-item">
+						<div class="guide-type-item-header">Opinions</div>
+						<div class="guide-type-item-content">
+							<h4><a href="https://www.lemagit.fr/tribune/La-Machine-Learning-grignote-le-logiciel">Le Machine Learning grignote le logiciel</a></h4>
+							<img class="guide-content-image" src="./Comprendre le Machine Learning_files/Artificial_intelligence_AI.jpg">
+							<p>Le Machine Learning connait actuellement une progression fulgurante. Et fait mieux vendre que le logiciel en lui-même.<a href="https://www.lemagit.fr/tribune/La-Machine-Learning-grignote-le-logiciel"> Lire la suite</a>
+							</p>
+						</div>
+					</div>
+				<div class="section-guide-type-item">
+						<div class="guide-type-item-header">Actualités</div>
+						<div class="guide-type-item-content">
+							<h4><a href="https://www.lemagit.fr/actualites/450410718/IAM-et-Machine-Learning-les-cles-dune-nouvelle-infrastructure-de-securite">IAM et Machine Learning, clés d’une nouvelle infrastructure de sécurité&nbsp;pour Ponemon</a></h4>
+							<p>Les professionnels de l’informatique et de la sécurité des systèmes d’information sondés par l’institut Ponemon pour Citrix placent ces deux technologies en têtes des impératifs pour faire face aux nouveaux enjeux qui se présentent à eux.
+<a href="https://www.lemagit.fr/actualites/450410718/IAM-et-Machine-Learning-les-cles-dune-nouvelle-infrastructure-de-securite"> Lire la suite</a>
+							</p>
+						</div>
+					</div>
+				<div class="section-guide-type-item">
+						<div class="guide-type-item-header">Actualités</div>
+						<div class="guide-type-item-content">
+							<h4><a href="https://www.lemagit.fr/actualites/450413901/Gartner-predit-une-nouvelle-vague-BI-plus-disruptive-que-la-DataViz-et-lanalytique-self-service">Après la « Modern BI », Gartner prédit une BI encore plus « disruptive »</a></h4>
+							<img class="guide-content-image" src="./Comprendre le Machine Learning_files/AI-2.jpg">
+							<p>Une nouvelle BI, à base d’AI et de Machine Learning, va faciliter encore plus que la DataViz l’utilisation des outils et automatiser les analyses de bout en bout. Cette tendance devrait remodeler le marché dans les années à venir. Selon Gartner.<a href="https://www.lemagit.fr/actualites/450413901/Gartner-predit-une-nouvelle-vague-BI-plus-disruptive-que-la-DataViz-et-lanalytique-self-service"> Lire la suite</a>
+							</p>
+						</div>
+					</div>
+				</div>
+		</section>
+<!-- DownloadOfferController, generated at 18:18:49 Sun Oct 27, 2019, by cds6 -->
+<section class="sign-up-wrapper cascading-reg " id="download-offer">
+	<img src="./Comprendre le Machine Learning_files/reg_wrapper_curl.png" class="wrapper-curl">
+	<div class="ctd-wrapper">
+		<div class="sign-up-content" id="dloWrapper">
+			<header class="sign-up-header">
+				<span class="eyebrow">Télécharger gratuitement ce guide</span>
+				<div class="reg-cover">
+						<img src="./Comprendre le Machine Learning_files/BigData5Projets_200X133.png" class="cover">
+						<img src="./Comprendre le Machine Learning_files/reg_cover_curl.png" class="cover-curl">
+					</div>
+				<h2>Étudiez 5 projets Big Data pour construire le vôtre</h2><p>Téléchargez ce guide pour vous inspirer des projets Big Data de la MAIF, la Société Générale, LeBonCoin, le Crédit Agricole et plus ! Une aubaine pour les DSI qui mettent l'accent sur la donnée en 2018.</p><button class="button black-button" id="expand-ctd">Start Download</button></header>
+			<div id="inlineRegistration">
+			<script>
+
+window["inlineRegistration_VALIDATION_MAXLENGTH"] = "Vous avez dépassé le nombre maximum de caractères autorisé.";
+
+</script><form id="inlineregform" class="sign-up-form cascading-reg-form page1" _lpchecked="1" action="https://users.lemagit.fr/registration/LeMagIT/InlineRegisterActivate.page" method="post" data-page="1"><div id="inlineregErrContainer" style="display:none"></div><ul><li class=""><label for="inlineRegistration_Email">Adresse e-mail professionnelle</label><input type="text" id="inlineRegistration_Email" name="dgUser#email" maxlength="100" size="25" value="" data-required="true" class="sign-up-textfield"><div class="signupErrors"><p id="inlineRegistration_Email.blank" class="sign-up-error-msg hidden">Vous avez oublié d'indiquer une adresse e-mail.</p><p id="inlineRegistration_Email.invalid" class="sign-up-error-msg hidden">L'adresse e-mail indiquée semble erronée.</p><p id="inlineRegistration_Email.exists" class="sign-up-error-msg hidden">Cet e-mail est déjà enregistré. Veuillez vous identifier <a href="https://users.techtarget.com/registration/lemagit/LoginRegister" class="inlineRegLoginErrMsg"> ici</a>.</p><p id="inlineRegistration_Email.maxlength" class="sign-up-error-msg hidden">Vous avez dépassé le nombre maximum de caractères autorisé.</p><p id="inlineRegistration_Email.invalid.domain" class="sign-up-error-msg hidden">Merci d’entrer une adresse e-mail professionnelle.</p></div></li><li class="optInCheckboxes"><fieldset class="checkboxList"><ul><li><input type="checkbox" id="inlineRegistration_Opt-In-Privacy" name="dgUser#optInPrivacy" value="true" data-required="true"><label for="inlineRegistration_Opt-In-Privacy">J'accepte <a href="https://www.techtarget.com/terms-of-use-fr/" target="_blank">les conditions d'utilisation</a> de TechTarget, ainsi que <a href="https://www.techtarget.com/privacy-policy-fr/" target="_blank">la politique de confidentialité</a> et le transfert de mes informations aux États-Unis pour traitement afin de me fournir les informations pertinentes décrites dans notre Politique de confidentialité.</label></li></ul></fieldset><div class="signupErrors"><p id="inlineRegistration_Opt-In-Privacy.blank" class="sign-up-error-msg hidden">Veuillez cocher la case si vous voulez continuer.</p></div></li><li class="optInCheckboxes"><fieldset class="checkboxList"><ul><li><input type="checkbox" id="inlineRegistration_Opt-In-Partners" name="dgUser#optInPartners" value="true" data-required="true"><label for="inlineRegistration_Opt-In-Partners">J'accepte que mes informations soient traitées par TechTarget et ses <a href="https://www.techtarget.com/privacy-partners/" target="_blank">partenaires</a> afin de communiquer avec moi par le biais du téléphone ou du courrier électronique et ce à propos d’informations pertinentes dans mon contexte professionnel. Je peux me désinscrire à tout moment.</label></li></ul></fieldset><div class="signupErrors"><p id="inlineRegistration_Opt-In-Partners.blank" class="sign-up-error-msg hidden">Veuillez cocher la case si vous voulez continuer.</p></div></li><input type="hidden" id="inlineRegistration_AppCode" name="appCD" value="127"><input type="hidden" id="inlineRegistration_FromURL" name="fromURL" value="https://www.lemagit.fr/espace_telechargement/final/252436200/9dc45c1681e70610VgnVCM100000ef01c80aRCRD?submit=1"><input type="hidden" id="inlineRegistration_ContentId" name="guideContentId" value=""><input type="hidden" id="inlineRegistration_AdId" name="ad_id" value="450432289"><input type="hidden" id="inlineRegistration_IncentiveId" name="incentiveId" value="252436200"><input type="hidden" id="inlineRegistration_IncentiveRule" name="incentiveRule" value="Topic"><input type="hidden" id="inlineRegistration_TEST---AB-Tracking1" name="dgUser#abTracking1" value=""><li class=""><input type="submit" value="Télécharger Maintenant" id="inlineRegSubmit" class="sign-up-btn"></li><div id="inlineRegProcessing" style="margin:30px 0px 15px 140px; display:none"><span class="processing" style="display:inline"><span class="animatedIcon"></span><span id="inlineRegProcessingText"></span></span></div>
+
+<style>
+.optInCheckboxes {
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
+}
+.optInCheckboxes li {
+    margin:0px !important;
+}
+.optInCheckboxes .checkboxList li label {
+    width: calc(100% - 50px) !important;
+    display: block !important;
+    margin: 0px 0px 10px 10px !important;
+    text-align: left !important;
+    float: left !important;
+}
+.optInCheckboxes .checkboxList li input[type=checkbox] {
+    margin-top: 5px !important;
+}
+.optInCheckboxes .errorMessageInput {
+    margin-left: 25px !important;
+}
+.optInCheckboxes .checkboxList .default-list {
+    margin-bottom:0px;
+}
+</style>
+<input type="hidden" id="inlineRegistration_Consent-Popup" name="user_consent#link" value="en"></ul></form><script>window.invEmailDomains = [ /@abc\.net/, /@gmail\./, /@yahoo\./, /@hotmail\./, /@msn\./, /@live\./, /@outlook\./, /@mailinator\./, /@mail\./, /@aol\./, /@comcast\.net/, /@verizon\.net/, /@earthlink\.net/, /@rediffmail\./, /@cox\.net/, /@gmx\./, /@ymail\./, /@qq\./, /@126\./, /@163\./, /@sbcglobal\.net/, /@rocketmail\./, /@indiatimes\./, /@sina\./, /@bellsouth\.net/, /@btinternet\./ ];</script><script>window.getUtmSrcForReg = function() { 
+  var decode = function(s) { return (s) ? decodeURIComponent(s.replace(/\+/g, " ")) : ""; };
+  var ret = getCookieValue("tt_src") || decode(getQueryStringValue("utm_source")) || "";
+  return ret;
+}
+</script><script>$("#inlineregform").submit(function(e) {
+
+  if($(this).hasClass("submitInProgress")) {
+    e.preventDefault(); 
+    return false;
+  } else {
+    $(this).addClass("submitInProgress")
+  }
+
+  var validation = {
+    eventName: "sub",
+    isSubmit: true,
+    msgInline: true,
+    highlightClass: "error",
+    highlightNode: "parent",
+    triggerJqueryEvent: {
+      error: "tt.inlinereg.emailOnly.error",
+      submit: "tt.inlinereg.emailOnly.submit"
+    },
+    required: { fields: ["dgUser#email", "dgUser#optInPrivacy", "dgUser#optInPartners"] },
+    emailDomain: { fields: ["dgUser#email"] },
+    emailFormat: { fields: ["dgUser#email"] },
+    emailExists: {
+      field: "dgUser#email",
+      onsuccess: "irr",
+        onfailure: "uidfwd",
+        noHL: true,
+        noErrMsg: true,
+        processingGif: {
+            id: "inlineRegProcessing",
+            hideSubmitId: "inlineRegSubmit",
+            displayStyle: "block"
+        }
+    }
+  };
+  
+  var isValid = urValidation.validate(validation, this);
+  
+  if(!isValid) { 
+   $(this).removeClass("submitInProgress");
+  }
+
+  return isValid;
+
+});
+
+window.uidfwd = function() {
+  window.open("https://users.techtarget.com/registration/LeMagIT/UID.page?email="+encodeURIComponent(document.getElementById("inlineregform").elements["dgUser#email"].value) + "&fromURL="+encodeURIComponent(document.getElementById("inlineregform").elements["fromURL"].value));
+  setTimeout("window.uidrldTimeout();",200);
+};
+window.uidrldTimeout = function() {
+  if(getCookieValue("uidLoggedIn")) {
+    window.location.reload();
+  } else {
+    setTimeout("window.uidrldTimeout();",200);
+  }
+};
+
+
+
+var validation = {
+  eventName: "",
+  msgInline: true,
+  inputFocus: false,
+  highlightClass: "error",
+  highlightNode: "parent",
+  required: {
+    fields: []
+  }
+};
+$("#inlineregform *").filter(':input').each(function() {
+  if(this.name=="dgUser#email") {
+    $(this).blur(function() { var v = JSON.parse(JSON.stringify(validation)); v.eventName = "eb"; v.required.fields = [this.name]; v.emailDomain = {fields:[this.name]}; v.emailFormat = {fields:[this.name]}; 
+      return urValidation.validate(v, this.form); 
+    });
+  }
+  else if(this.getAttribute("data-required")=="true") {
+    if(this.type=="checkbox") {
+        $(this).change(function() { var v = JSON.parse(JSON.stringify(validation)); v.eventName = "cc"; v.required.fields = [this.name]; return urValidation.validate(v, this.form); });
+    } else {
+        $(this).blur(function() { var v = JSON.parse(JSON.stringify(validation)); v.eventName = "rb"; v.required.fields = [this.name]; return urValidation.validate(v, this.form); });
+    }
+  }
+});</script><script>window.irr = function() {
+
+        $("#inlineRegSubmit").hide();
+        // $("#inlineRegProcessingText").html("Beginning Registration...")
+        $("#inlineRegProcessing").show();
+
+        var err = function() {
+          $("#inlineRegProcessing .animatedIcon").hide();
+          $("#inlineRegProcessingText").attr("class","error");
+          $("#inlineRegProcessingText").html("There was an error processing your information. Please try again later.");
+          $("#inlineRegistration").trigger("tt.inlinereg.emailOnly.error");
+        };
+
+	var self = this;
+	self.crs;
+	self.tt_ut;
+
+	var userregUrl = "https://users.lemagit.fr/registration/rest/RegistrationService/";
+	var f = $("#inlineregform")[0].elements;
+	var userParams = {
+		email: encodeURIComponent($.trim(f["dgUser#email"].value)),
+		siteName: "LeMagIT",
+		appCode: f["appCD"].value,
+		adId: f["ad_id"].value,
+		contentId: f["guideContentId"].value,
+		incentiveId: f["incentiveId"].value,
+		incentiveRule: f["incentiveRule"].value,
+		utmSource: encodeURIComponent(getUtmSrcForReg()),
+		abTracking1: encodeURIComponent(f["dgUser#abTracking1"].value),
+		optInPrivacy: encodeURIComponent(f["dgUser#optInPrivacy"].value),
+		optInPartners: encodeURIComponent(f["dgUser#optInPartners"].value)
+	};
+
+        var passThruVars = {
+            FromURL: f["fromURL"].value || window.location.href,
+            AppCode: f["appCD"].value,
+            AdId: f["ad_id"].value,
+            ContentId: f["guideContentId"].value,
+            IncentiveId: f["incentiveId"].value,
+            IncentiveRule: f["incentiveRule"].value
+        };
+        window.inlineRegistration_variables = passThruVars;
+
+	$.getJSON(userregUrl + "RegisterEmail?callback=?", userParams, function(data) {
+		if(data.RegTx[0].status == 'SUCCESS') {
+			for (var i = 0; i < data.RegTx[0].cookies.cookie.length; i++) { 
+				var c = data.RegTx[0].cookies.cookie[i];
+				document.cookie = c.name+"="+c.value+"; max-age="+c.maxAge+"; path=/; domain="+getTopLevelDomainEnv(false) + (c.secure ? "; secure" : "");
+				if(c.name == "crs" && typeof processTtPreReg == "function") processTtPreReg(getUID(c.value));
+			}
+	
+			self.crs = data.RegTx[0].cookies.cookie[1].value;
+			self.tt_ut = data.RegTx[0].cookies.cookie[0].value;
+	
+			// optimizely page 1 function
+			if (typeof successfulPage1FormSubmission === 'function') { 
+				var page1ABValue = document.getElementById("inlineRegistration_TEST---AB-Tracking1").value;
+				successfulPage1FormSubmission(page1ABValue);
+			}
+
+			// Load step2 
+			executeInlineByPage("LeMagIT", "inlineRegistration", "inlineregister", 13);
+		}
+		if(data.RegTx[0].validations.validation) {
+                     err();
+		}
+		return false;
+	}).fail(function() {
+             err();
+             return false;
+	});
+	return false;
+};
+
+// DoC open in new window
+$("#inlineRegistration a.consentWindow")
+    .attr("target", "Consent")
+    .on("click", function(evt) {
+        window.open("", "Consent", "width=500,height=600,scrollbars=1");
+    });
+</script></div>
+		</div>
+	</div>
+</section>
+<section class="section guide-section" id="guideSection3" data-menu-title="La technologie">
+		<h3 class="section-title guide-collapse-toggle">
+			<span class="chapter-number">3</span>La technologie<span class="toggle-marker">-</span>
+		</h3>
+		<h4 class="section-subtitle">Des algorithmes dans le Cloud pour simplifier </h4>
+		<p></p>
+		
+		<div class="section-guide-type-wrapper">
+				<div class="section-guide-type-item">
+						<div class="guide-type-item-header">Conseils IT</div>
+						<div class="guide-type-item-content">
+							<h4><a href="https://www.lemagit.fr/conseil/Machine-Learning-comparatif-des-outils-dAWS-Google-IBM-et-Microsoft">Machine Learning : comparatif des outils d’AWS, Google, IBM et Microsoft</a></h4>
+							<img class="guide-content-image" src="./Comprendre le Machine Learning_files/businessanalytics_article_016.jpg">
+							<p>La guerre des plateformes de Machine Learning est ouverte. Il est difficile pour les entreprises de s’y retrouver. Ce comparatif vous aide à prendre la bonne décision. <a href="https://www.lemagit.fr/conseil/Machine-Learning-comparatif-des-outils-dAWS-Google-IBM-et-Microsoft"> Lire la suite</a>
+							</p>
+						</div>
+					</div>
+				<div class="section-guide-type-item">
+						<div class="guide-type-item-header">Conseils IT</div>
+						<div class="guide-type-item-content">
+							<h4><a href="https://www.lemagit.fr/conseil/Trois-exemples-concrets-dalgorithmes-de-Machine-Learning">Trois exemples concrets d’algorithmes  de Machine Learning</a></h4>
+							<p>Découverte par affinité,  la classification, le clustering sont autant de méthodes d’analyse des données qui s’adossent à des algorithmes de Machine Learning. Cet article en liste trois, ainsi que leur fonctionnement.<a href="https://www.lemagit.fr/conseil/Trois-exemples-concrets-dalgorithmes-de-Machine-Learning"> Lire la suite</a>
+							</p>
+						</div>
+					</div>
+				<div class="section-guide-type-item">
+						<div class="guide-type-item-header">Actualités</div>
+						<div class="guide-type-item-content">
+							<h4><a href="https://www.lemagit.fr/actualites/450432014/Intelligence-artificielle-et-machine-learning-au-service-des-attaquants">Intelligence Artificielle et Machine Learning au service des attaquants</a></h4>
+							<p>Plusieurs spécialistes de la sécurité informatique s’attendent à ce que les cyber-délinquants commence à mettre à profit des techniques qui commencent à peine à se faire plus présentes dans l’arsenal de défense. <a href="https://www.lemagit.fr/actualites/450432014/Intelligence-artificielle-et-machine-learning-au-service-des-attaquants"> Lire la suite</a>
+							</p>
+						</div>
+					</div>
+				</div>
+		</section>
+<div class="ad-wrapper ad-inline ad-mobile">
+				<!-- AdsController, generated at 18:18:49 Sun Oct 27, 2019, by cds6 -->
+<div id="mobile-2" class="ad ad-mb"><script>GPT.display('mobile-2')</script></div></div>
+		<section class="section guide-section" id="guideSection4" data-menu-title="Ils ont basculé">
+		<h3 class="section-title guide-collapse-toggle">
+			<span class="chapter-number">4</span>Ils ont basculé<span class="toggle-marker">-</span>
+		</h3>
+		<h4 class="section-subtitle">Le Machine Learning est moteur de prédictions et d’anticipation</h4>
+		<p></p>
+		
+		<div class="section-guide-type-wrapper">
+				<div class="section-guide-type-item">
+						<div class="guide-type-item-header">Projets IT</div>
+						<div class="guide-type-item-content">
+							<h4><a href="https://www.lemagit.fr/etude/Conexance-Machine-Learning-Microsoft-Azure">Conexance dope ses prédictions marketing au Machine Learning et à Azure</a></h4>
+							<img class="guide-content-image" src="./Comprendre le Machine Learning_files/142304_cs0526.jpg">
+							<p>Tirer des Big Data de ses clients des prévisions exploitables par le marketing. Tel est le métier de Conexance. Pour y arriver, la PME teste en permanence de nouveaux algorithmes et de nouveaux outils.<a href="https://www.lemagit.fr/etude/Conexance-Machine-Learning-Microsoft-Azure"> Lire la suite</a>
+							</p>
+						</div>
+					</div>
+				<div class="section-guide-type-item">
+						<div class="guide-type-item-header">Projets IT</div>
+						<div class="guide-type-item-content">
+							<h4><a href="https://www.lemagit.fr/etude/Quand-le-Machine-Learning-ameliore-la-collecte-de-fonds-des-ONG">Quand le Machine Learning améliore la collecte de fonds des ONG</a></h4>
+							<img class="guide-content-image" src="./Comprendre le Machine Learning_files/CochonArgent.png">
+							<p>La start-up DonorBureau s’appuie sur des algorithmes de Machine Learning automatisés dans des outils de data science pour mieux cibler les potentiels donateurs des ONG.<a href="https://www.lemagit.fr/etude/Quand-le-Machine-Learning-ameliore-la-collecte-de-fonds-des-ONG"> Lire la suite</a>
+							</p>
+						</div>
+					</div>
+				<div class="section-guide-type-item">
+						<div class="guide-type-item-header">Projets IT</div>
+						<div class="guide-type-item-content">
+							<h4><a href="https://www.lemagit.fr/etude/Tour-de-France-les-donnees-en-renfort-de-la-Grande-Boucle">Tour de France : les données en renfort de la Grande Boucle</a></h4>
+							<p>La plus grande course cycliste du monde transforme l’expérience de ses fans et des téléspectateurs grâce à l’IoT, l’analyse de données et le Machine Learning<a href="https://www.lemagit.fr/etude/Tour-de-France-les-donnees-en-renfort-de-la-Grande-Boucle"> Lire la suite</a>
+							</p>
+						</div>
+					</div>
+				</div>
+		</section>
+</div>
+				<div id="content-right" class="content-right">
+					</div>
+			</article>
+		</div>
+		<!-- GoogleAdSenseController, generated at 10:47:01 Sun Oct 27, 2019, by cds6 -->
+<section class="main-content ads-by-google" id="ads-by-google">
+		<h2><a href="https://www.google.com/adsense/support/bin/request.py?contact=abg_afc">- ANNONCES GOOGLE</a></h2>
+		<script async="" src="./Comprendre le Machine Learning_files/f(2).txt"></script>
+		<!-- Search Sites Responsive AFC -->
+		<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6050985421795229" data-ad-slot="8728364240" data-ad-format="auto"></ins>
+		<script>
+		(adsbygoogle = window.adsbygoogle || []).push({});
+		</script>
+	</section>
+<!-- FooterLinksController, generated at 10:47:01 Sun Oct 27, 2019, by cds6 -->
+<footer id="page-footer">
+	<div class="content-left">
+		<!-- Plug in TechTarget Logo inside the anchor tag here. -->
+		<div class="column column-logo">
+			<a href="https://www.lemagit.fr/essentialguide/Comprendre-le-Machine-Learning#"></a>
+		</div>
+	</div>
+	<div class="content-center">
+		<ul class="column">
+			<li class="footer-item footer-item-col-1 footer-item-row-1"><a href="https://www.lemagit.fr/a-propos">À Propos</a></li>
+			<li class="footer-item footer-item-col-1 footer-item-row-2"><a href="https://www.lemagit.fr/a-propos/la-redaction">Rencontrez les journalistes</a></li>
+			<li class="footer-item footer-item-col-1 footer-item-row-3"><a href="https://www.lemagit.fr/a-propos/contact">Contacts</a></li>
+			<li class="footer-item footer-item-col-1 footer-item-row-4"><a href="https://www.lemagit.fr/plan-du-site">Plan Du Site</a></li>
+			<li class="footer-item footer-item-col-1 footer-item-row-5"><a href="https://www.lemagit.fr/archives">Archives</a></li>
+			<li class="footer-item footer-item-col-1 footer-item-row-6"><a href="https://www.techtarget.fr/privacy-policy-fr/">Confidentialité</a></li>
+			<li class="footer-item footer-item-col-1 footer-item-row-7"><a href="https://www.techtarget.com/html/cookie_policy_fr.html">Utilisation Des Cookies</a></li>
+			</ul>
+		<ul class="column">
+			<li class="footer-item footer-item-col-2 footer-item-row-1"><a href="http://reprints.ygsgroup.com/m/techtarget">Réimpressions</a></li>
+			<li class="footer-item footer-item-col-2 footer-item-row-2"><a href="https://www.techtarget.fr/">Annonceurs</a></li>
+			<li class="footer-item footer-item-col-2 footer-item-row-3"><a href="https://www.lemagit.fr/a-propos/partenaires">Partenaires</a></li>
+			<li class="footer-item footer-item-col-2 footer-item-row-4"><a href="https://www.techtarget.fr/">Dossier De Presse</a></li>
+			<li class="footer-item footer-item-col-2 footer-item-row-5"><a href="https://www.lemagit.fr/evenements">Agenda</a></li>
+			<li class="footer-item footer-item-col-2 footer-item-row-6"><a href="https://www.lemagit.fr/contributeurs">Nos Journalistes et Experts</a></li>
+			</ul>
+		<ul class="column column-mobile-hidden">
+			<li class="footer-item footer-item-col-3 footer-item-row-1"><a href="https://www.lemagit.fr/ressources">Technologies</a></li>
+			<li class="footer-item footer-item-col-3 footer-item-row-2"><a href="https://www.lemagit.fr/ehandbooks">E-Handbooks</a></li>
+			<li class="footer-item footer-item-col-3 footer-item-row-3"><a href="https://www.lemagit.fr/conseils">Conseils IT</a></li>
+			<li class="footer-item footer-item-col-3 footer-item-row-4"><a href="https://www.lemagit.fr/opinions">Opinions</a></li>
+			<li class="footer-item footer-item-col-3 footer-item-row-5"><a href="https://www.lemagit.fr/guides">Guides Essentiels</a></li>
+			<li class="footer-item footer-item-col-3 footer-item-row-6"><a href="https://www.lemagit.fr/Projets-IT">Projets IT</a></li>
+			</ul>
+	</div>
+	<div class="content-right">
+		<div class="column column-legal">
+			<p class="footer-legal">Tous droits réservés, <span>
+			<a href="https://www.techtarget.com/html/terms_of_use_fr.html">Copyright 2007 - 2019</a>, TechTarget</span>
+			
+			</p>
+			
+		</div>
+	</div>
+</footer><script src="./Comprendre le Machine Learning_files/responsive-ui.min.js.téléchargement"></script><!-- Begin Chartbeat -->
+		<script>
+    var _sf_async_config={};
+    _sf_async_config.uid = 41935;
+    _sf_async_config.domain = 'techtargetnetwork.com';
+    _sf_async_config.sections = 'LeMagIT, LeMagIT - Gestion des donn\u00E9es';
+    _sf_async_config.authors = 'NO AUTHOR, ESSENTIALGUIDE, LeMagIT - ESSENTIALGUIDE';
+    _sf_async_config.useCanonical = true;
+    (function(){
+      function loadChartbeat() {
+        window._sf_endpt=(new Date()).getTime();
+        var e = document.createElement('script');
+        e.setAttribute('language', 'javascript');
+        e.setAttribute('type', 'text/javascript');
+        e.setAttribute('src',
+           (('https:' == document.location.protocol) ? 'https://a248.e.akamai.net/chartbeat.download.akamai.com/102508/' : 'https://static.chartbeat.com/') + 'js/chartbeat.js');
+        document.body.appendChild(e);
+      }
+      var oldonload = window.onload;
+      window.onload = (typeof window.onload != 'function') ?
+         loadChartbeat : function() { oldonload(); loadChartbeat(); };
+    })();
+</script><!-- End Chartbeat -->
+	</div>
+	<div id="mobile-sidebars" class="mobile-sidebars">
+		<nav id="chapters-bar-menu" class="chapters-bar mobile-chapters-bar" style="-webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); touch-action: none;">
+	<div class="chapters-bar-header">
+		<i class="icon" data-icon="1"></i>Dans cette Technologies</div>
+	<ul class="chapters-bar-list"><li class="chapters-bar-item selected"><a href="https://www.lemagit.fr/essentialguide/Comprendre-le-Machine-Learning#">Introduction</a></li><li class="chapters-bar-item"><a href="https://www.lemagit.fr/essentialguide/Comprendre-le-Machine-Learning#">Le Machine Learning expliqué</a></li><li class="chapters-bar-item"><a href="https://www.lemagit.fr/essentialguide/Comprendre-le-Machine-Learning#">Le Marché</a></li><li class="chapters-bar-item"><a href="https://www.lemagit.fr/essentialguide/Comprendre-le-Machine-Learning#">La technologie</a></li><li class="chapters-bar-item"><a href="https://www.lemagit.fr/essentialguide/Comprendre-le-Machine-Learning#">Ils ont basculé</a></li></ul>
+</nav><aside class="resources-bar mobile-resources-bar" id="resources-bar">
+			<!-- VendorResourcesController, generated at 21:33:28 Sun Oct 27, 2019, by cds6 -->
+<div class="resources-bar-header"><i class="icon" data-icon="l"></i>Actualités sponsorisées</div>
+			<ul class="resources-bar-list sponsored-news">
+				<li class="resources-bar-item">
+						<a href="https://www.lemagit.fr/SD-WAN/Lautomatisation-atout-numero-1-du-SD-WAN">L’automatisation, atout numéro 1 du SD-WAN</a>
+						<span>–Silverpeak</span>
+					</li>
+				<li class="resources-bar-item">
+						<a href="https://www.lemagit.fr/SD-WAN/Comment-bien-securiser-son-SD-WAN">Comment bien sécuriser son SD-WAN</a>
+						<span>–Silverpeak</span>
+					</li>
+				<li class="resources-bar-item see-more"><a href="https://www.lemagit.fr/espace_partenaires">Voir plus</a></li>
+				</ul>
+		<div class="resources-bar-header"><i class="icon" data-icon="l"></i>Ressources Partenaire</div>
+		<ul class="resources-bar-list" id="vendorResourcesSplash">
+			<li class="resources-bar-item">
+					<a href="https://www.bitpipe.fr/detail/RES/1508754092_124.html">Les clés de l'IT : Collaboration Unifiée</a>
+					<span>–LeMagIT</span>
+					<i class="icon" data-icon="7"></i>
+				</li>
+			<li class="resources-bar-item">
+					<a href="https://www.bitpipe.fr/detail/RES/1504104683_121.html">Les clés de l'IT : Spécial Virtualisation</a>
+					<span>–LeMagIT</span>
+					<i class="icon" data-icon="7"></i>
+				</li>
+			</ul>
+<!-- LatestContentController, generated at 21:33:28 Sun Oct 27, 2019, by cds6 -->
+<div class="resources-bar-header"><i class="icon" data-icon="2"></i>Actualités</div>
+	<ul class="resources-bar-list latest-news">
+	<li class="resources-bar-item">
+			<a href="https://www.lemagit.fr/actualites/252472871/AWS-soutient-le-langage-de-programmation-systeme-Rust">AWS soutient à son tour le langage de programmation Rust</a>
+		</li>
+	<li class="resources-bar-item">
+			<a href="https://www.lemagit.fr/actualites/252472866/Google-debauche-un-ancien-patron-dOffice-365-pour-sa-G-Suite">Google débauche un ancien patron d’Office&nbsp;365 pour sa G Suite</a>
+		</li>
+	<li class="resources-bar-item">
+			<a href="https://www.lemagit.fr/actualites/252472826/Open-Model-Manager-SAS-se-tourne-vers-lopen-source">Open Model Manager : SAS se tourne vers l’open source</a>
+		</li>
+	<li class="resources-bar-item see-more">
+			<a href="https://www.lemagit.fr/actualites" class="button blue-button">Voir tous Nouvelles</a>
+		</li>
+	</ul>
+<!-- RecentEProductsController, generated at 21:33:28 Sun Oct 27, 2019, by cds6 -->
+<div class="resources-bar-header ezine-header"><i class="icon" data-icon="2"></i>
+	Télécharger Information Sécurité</div>
+<ul class="resources-bar-list ezine">
+	<li class="resources-bar-item">
+		<a href="https://www.lemagit.fr/ezine/Information-Securite/Information-securite-11-Mobiles-des-menaces-reelles-loin-detre-des-cas-isoles"><img src="./Comprendre le Machine Learning_files/CoverEzin11sec.jpg"></a>
+		<span class="ezine-header">Dans ce numéro:</span>
+		<ul>
+		<li>Android Q simplifie encore la gestion des terminaux mobiles</li>
+		<li>iPadOS&nbsp;13&nbsp;: peut-être enfin l’OS qu’attendait l’iPad pour se substituer à l’ordinateur portable</li>
+		</ul>
+		<a href="https://www.lemagit.fr/ezine/Information-Securite/Information-securite-11-Mobiles-des-menaces-reelles-loin-detre-des-cas-isoles" class="button cw-red-button">
+			Télécharger cette édition</a>
+	</li>
+</ul>
+</aside></div>
+	<div id="image-overlay" class="image-overlay">
+		<div class="image-overlay-img"></div>
+		<div class="image-overlay-close">Close</div>
+	</div>
+	
+<!--
+Component Load Times
+====================
+DefaultPageController=269 ms
+
+Total time=269 ms
+Request Serving Server: cds6
+-->
+
+
+<script id="f5_cspm">(function(){var f5_cspm={f5_p:'ENHKENELMGINDAIPCKCOGEGFDIDELLOOGLEDFGKMLBNPIOJEFAPOJOGCECHFILMLJANPOBKNBCJBDJAMFOKLDBBBNGHAKKFAAALICFEMEALABJHDAAPIBELFAMANFAFE',setCharAt:function(str,index,chr){if(index>str.length-1)return str;return str.substr(0,index)+chr+str.substr(index+1);},get_byte:function(str,i){var s=(i/16)|0;i=(i&15);s=s*32;return((str.charCodeAt(i+16+s)-65)<<4)|(str.charCodeAt(i+s)-65);},set_byte:function(str,i,b){var s=(i/16)|0;i=(i&15);s=s*32;str=f5_cspm.setCharAt(str,(i+16+s),String.fromCharCode((b>>4)+65));str=f5_cspm.setCharAt(str,(i+s),String.fromCharCode((b&15)+65));return str;},set_latency:function(str,latency){latency=latency&0xffff;str=f5_cspm.set_byte(str,48,(latency>>8));str=f5_cspm.set_byte(str,49,(latency&0xff));str=f5_cspm.set_byte(str,43,2);return str;},wait_perf_data:function(){try{var wp=window.performance.timing;if(wp.loadEventEnd>0){var res=wp.loadEventEnd-wp.navigationStart;if(res<60001){var cookie_val=f5_cspm.set_latency(f5_cspm.f5_p,res);window.document.cookie='f5avr2045460670aaaaaaaaaaaaaaaa='+encodeURIComponent(cookie_val)+';path=/';}
+return;}}
+catch(err){return;}
+setTimeout(f5_cspm.wait_perf_data,100);return;},go:function(){var chunk=window.document.cookie.split(/\s*;\s*/);for(var i=0;i<chunk.length;++i){var pair=chunk[i].split(/\s*=\s*/);if(pair[0]=='f5_cspm'&&pair[1]=='1234')
+{var d=new Date();d.setTime(d.getTime()-1000);window.document.cookie='f5_cspm=;expires='+d.toUTCString()+';path=/;';setTimeout(f5_cspm.wait_perf_data,100);}}}}
+f5_cspm.go();}());</script><img src="./Comprendre le Machine Learning_files/activity.gif" class="track"><div id="cboxOverlay" style="display: none;"></div><div id="colorbox" class="" role="dialog" tabindex="-1" style="display: none;"><div id="cboxWrapper"><div><div id="cboxTopLeft" style="float: left;"></div><div id="cboxTopCenter" style="float: left;"></div><div id="cboxTopRight" style="float: left;"></div></div><div style="clear: left;"><div id="cboxMiddleLeft" style="float: left;"></div><div id="cboxContent" style="float: left;"><div id="cboxTitle" style="float: left;"></div><div id="cboxCurrent" style="float: left;"></div><button type="button" id="cboxPrevious"></button><button type="button" id="cboxNext"></button><button id="cboxSlideshow"></button><div id="cboxLoadingOverlay" style="float: left;"></div><div id="cboxLoadingGraphic" style="float: left;"></div></div><div id="cboxMiddleRight" style="float: left;"></div></div><div style="clear: left;"><div id="cboxBottomLeft" style="float: left;"></div><div id="cboxBottomCenter" style="float: left;"></div><div id="cboxBottomRight" style="float: left;"></div></div></div><div style="position: absolute; width: 9999px; visibility: hidden; display: none; max-width: none;"></div></div><script type="text/javascript" id="">function dloEventHandler(){var a=Array.prototype.slice.call(arguments);dataLayer.push({eventCategory:a[0],eventAction:a[1],eventLabel:a[2],eventValue:a[3],eventNoninteraction:a[4]});dataLayer.push({event:"gaInlineRegistrationJsEvent"})}dloEventHandler("DLO Activity",google_tag_manager["GTM-PWWZSH"].macro(32)+"_"+google_tag_manager["GTM-PWWZSH"].macro(33),"DLO Call to Action",null,!0);var downloadOfferRegSubmittedCookie="tt.gtm.downloadOfferReg.fullReg.submitted";
+~document.cookie.indexOf(downloadOfferRegSubmittedCookie+"\x3d")&&(dloEventHandler("DLO Activity",google_tag_manager["GTM-PWWZSH"].macro(34)+"_"+google_tag_manager["GTM-PWWZSH"].macro(35),"DLO Successful Registration",null,!0),document.cookie=downloadOfferRegSubmittedCookie+"\x3d; expires\x3dThu, 01 Jan 1970 05:00:00 GMT; path\x3d/");$("form.sign-up-form.cascading-reg-form.logged-in").on("click","input:submit",function(){dloEventHandler("DLO Activity",google_tag_manager["GTM-PWWZSH"].macro(36)+"_"+google_tag_manager["GTM-PWWZSH"].macro(37),"DLO Download Click",null,!1)});
+$("section.sign-up-wrapper.cascading-reg div#inlineRegistration").on("tt.inlinereg.emailOnly.error",function(){dloEventHandler("DLO Activity",google_tag_manager["GTM-PWWZSH"].macro(38)+"_"+google_tag_manager["GTM-PWWZSH"].macro(39),"Partial Registration Error",null,!0)});$("section.sign-up-wrapper.cascading-reg div#inlineRegistration").on("tt.inlinereg.emailOnly.submit",function(){dloEventHandler("DLO Activity",google_tag_manager["GTM-PWWZSH"].macro(40)+"_"+google_tag_manager["GTM-PWWZSH"].macro(41),"Partial Registration Submit",null,!1)});
+$("section.sign-up-wrapper.cascading-reg div#inlineRegistration").on("tt.inlinereg.fullReg.error",function(){dloEventHandler("DLO Activity",google_tag_manager["GTM-PWWZSH"].macro(42)+"_"+google_tag_manager["GTM-PWWZSH"].macro(43),"Full Registration Error",null,!0)});$("section.sign-up-wrapper.cascading-reg div#inlineRegistration").on("tt.inlinereg.fullReg.load",function(){dloEventHandler("DLO Activity",google_tag_manager["GTM-PWWZSH"].macro(44)+"_"+google_tag_manager["GTM-PWWZSH"].macro(45),"Full Registration Form Load",null,!0)});
+$("section.sign-up-wrapper.cascading-reg div#inlineRegistration").on("tt.inlinereg.fullReg.submit",function(){dloEventHandler("DLO Activity",google_tag_manager["GTM-PWWZSH"].macro(46)+"_"+google_tag_manager["GTM-PWWZSH"].macro(47),"Submit Full Registration",null,!0);document.cookie=downloadOfferRegSubmittedCookie+"\x3d1; path\x3d/"});</script><script type="text/javascript" id="">(function(){var a=document.createElement("script");a.src="//cdn.ttgtmedia.com/rms/ux/javascript/advertisement.js";document.head.appendChild(a)})();</script><script type="text/javascript" id="">var DATALAYER_OBJECT_NAME="dataLayer",referrerOverride=function(d){var c=window[DATALAYER_OBJECT_NAME]||[];c.push({event:"optimizely-referrer-override","optimizely-referrer":d})},sendCampaignData=function(d,c,h,g,f,k,b,a,e){if(g=optimizely.get("data")&&optimizely.get("data").campaigns[c]&&optimizely.get("data").campaigns[c].integrationSettings&&optimizely.get("data").campaigns[c].integrationSettings.google_universal_analytics&&optimizely.get("data").campaigns[c].integrationSettings.google_universal_analytics.universal_analytics_slot)d=
+d?d+"("+c+")":c,h=h.join(","),f=f?f+"("+k+")":h+"("+k+")",b=b?b+"("+a+")":a,e=e?"holdback":"treatment",e=[d,f,b,e].join(":"),b=window[DATALAYER_OBJECT_NAME]||[],b.push({event:"campaign-decided","optimizely-dimension-value":e,"optimizely-dimension-number":g})},initNewOptimizelyIntegration=function(d,c){var h=!1,g=function(b){var a=window.optimizely.get&&window.optimizely.get("state"),e=a.getRedirectInfo()&&a.getRedirectInfo().referrer;!h&&e&&(d(e),h=!0);a=a.getCampaignStates({isActive:!0});a=a[b];
+e=a.campaignName;if(0<a.audiences.length){var f=a.audiences.map(function(a){return a.name});var g=a.audiences.map(function(a){return a.id})}else f=["everyone_else"],g=[0];var k=a.experiment.name,l=a.experiment.id,m=a.variation.name,n=a.variation.id;c(e,b,f,g,k,l,m,n,a.isInCampaignHoldback)},f=function(){window.optimizely=window.optimizely||[];window.optimizely.push({type:"addListener",filter:{type:"lifecycle",name:"campaignDecided"},handler:function(b){b=b.data.campaign.id;g(b)}})},k=function(){var b=
+window.optimizely.get&&window.optimizely.get("state");if(b){b=b.getCampaignStates({isActive:!0});for(var a in b)g(a)}};k();f()},initOptimizelyIntegration=function(d,c){initNewOptimizelyIntegration(d,c)};initOptimizelyIntegration(referrerOverride,sendCampaignData);</script>
+<script type="text/javascript" id="">(function(){var a=document,b=a.getElementsByTagName("head")[0];a=a.createElement("script");var c="https:"==document.location.protocol?"https://":"http://";a.type="text/javascript";a.async=!0;a.src=c+"s.dpmsrv.com/dpm_b4c96d80854dd27e76d8cc9e21960eebda52e962.min.js";b.appendChild(a)})();</script>
+<script type="text/javascript" id="">setTimeout(function(){var a=document.createElement("script"),b=document.getElementsByTagName("script")[0];a.src=document.location.protocol+"//dnn506yrbagrg.cloudfront.net/pages/scripts/0012/7034.js?"+Math.floor((new Date).getTime()/36E5);a.async=!0;a.type="text/javascript";b.parentNode.insertBefore(a,b)},1);</script><div style="display: none; visibility: hidden;">
+<script>var google_conversion_id=1070110249,google_conversion_label="RRsgCOW4tgMQqayi_gM",google_custom_params=window.google_tag_params,google_remarketing_only=!0;</script>
+<script src="./Comprendre le Machine Learning_files/f(3).txt"></script><iframe name="google_cookie_match_frame" title="Google cookie match frame" width="1" height="1" src="./Comprendre le Machine Learning_files/pixel.html" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" style="display: none !important;" scrolling="no"></iframe>
+<noscript></noscript>
+<script>var google_conversion_id=1072226410,google_conversion_label="x3P_CIql1gMQ6sCj_wM",google_custom_params=window.google_tag_params,google_remarketing_only=!0;</script>
+<script src="./Comprendre le Machine Learning_files/f(3).txt"></script>
+<noscript></noscript></div><script language="javascript" type="text/javascript" src="./Comprendre le Machine Learning_files/chartbeat.js.téléchargement"></script></body></html>

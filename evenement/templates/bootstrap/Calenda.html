@@ -1,0 +1,70 @@
+
+<htmL>
+<head>
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+     <!-- HERE WE LOAD A STATIC VARIABLE FROM SETTING  ---> 
+     {% load static%}
+     <!--------------------------------------------------->
+     <title>The calendar</title>
+    
+     <link rel="stylesheet" id="theme" type="text/css" href="{% static 'css/theme-default.css' %}">
+     <link rel="stylesheet" id="theme" type="text/css" href="{% static 'css/fullcalendar/fullcalendar.css' %}">
+    
+    
+    
+</head>
+<body>
+  <div class="page-container">
+        <!-- this part will be dedecated for the nex month and previous month -->
+        <div class="page-content">
+          
+          <!-- end of the part of next month and prevoius month       -->
+          <div class="content-frame"> 
+            <div class="content-frame-top">
+                    <div class="fc-toolbar">
+                        <div class="fc-left"> 
+                            <a href={{ previous_month }}>
+                              <div class="btn btn-default fc-icon-left">Previous month</div> 
+                            </a>
+                         </div>
+                         <div class="fc-right">
+                            <a href={{ next_month }}>
+                                <div class="btn btn-default"> Next month <i class="fa fa-arrow-right"></i></div>
+                            </a>
+                    </div>
+                     </div> 
+                    
+            </div>
+
+            <div class="page-title">                    
+                    <h2><span class="fa fa-calendar"></span> Calendar page</h2>
+            </div>
+              
+        <div id="calendar" class="fc fc-ltr fc-unthemed">   
+              <div class="fc-view-container">
+                <div>
+                  {{ calendar }}       
+                </div>
+        </div>
+      
+  </div>
+</body>
+
+
+  <!-- START PLUGINS -->
+  <script src="{% static 'js/plugins/jquery/jquery.min.js'%}" ></script>
+  <script src="{% static 'js/plugins/jquery/jquery-ui.min.js'%}" ></script>
+
+  <!-- END PLUGINS -->
+
+   <!-- THIS PAGE PLUGINS -->
+  <script src="{% static 'js/plugins/icheck/icheck.min.js'%}" ></script>
+  <script src="{% static 'js/plugins/mcustomscrollbar/jquery.mCustomScrollbar.min.js'%}" ></script>
+  
+   <!-- END PAGE PLUGINS -->
+  
+  
+  </div>
+</body>  
+</html>  

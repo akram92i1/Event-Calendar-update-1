@@ -1,0 +1,31 @@
+
+<nav class="navbar navbar-expand-lg navbar-light bg-dark">
+  <a class="navbar-brand text-white" href="#"></a>
+  <!-- to display the logo -->
+   {% load static %}
+  <!------------------------>
+
+    <img src="{% static "evenement/Sans titre-1.png" %}">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+ 
+  </button>
+ 
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link text-white  btn-outline-success" href="{% url 'add_domain' %}">Add Domain <span class="sr-only"></span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link text-white  btn-outline-success" href="{% url 'index' %}">Add events <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-white  btn-outline-success" href="{% url 'add_question'  %}">Add question</a>
+      </li>
+     
+      <li class="nav-item">
+        <a class="nav-link  text-white   btn-outline-danger" href="{%url 'Calendar_print'%}">Calendar</a>
+      </li>
+    </ul>
+   
+  </div>
+</nav>

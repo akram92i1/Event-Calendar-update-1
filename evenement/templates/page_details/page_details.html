@@ -1,0 +1,58 @@
+<html>
+  <head>
+      <title> {{object.titre}} </title>
+      {% load static %}
+        <link rel="stylesheet" id="theme" type="text/css" href="{% static 'css/theme-default.css' %}">
+        
+  </head>
+
+<body>   
+<div class="page-container">
+  <div class="page-content" style="height: 1117px;">
+  <div class="page-content-wrap">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="panel panel-default">
+              <div class="panel-heading">
+                <div class="panel-title"> 
+                    {{object.titre}}  
+                </div>
+              </div>
+          <div class="panel-body">
+            {% load static %}
+            {% if object  %}
+              <ul> 
+              <li>
+                {{object.id}}
+                </li>
+                <li>
+                {{object.titre}}                                                                                    
+                </li>
+                <li>
+                {{object.question.quest}}                                                                                    
+                </li>
+                
+              </ul>
+            {% else %}
+            {% endif %}
+            </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+</body>
+  <!-- START PLUGINS -->
+  <script src="{% static 'js/plugins/jquery/jquery.min.js'%}" ></script>
+  <script src="{% static 'js/plugins/jquery/jquery-ui.min.js'%}" ></script>
+
+  <!-- END PLUGINS -->
+
+   <!-- THIS PAGE PLUGINS -->
+  <script src="{% static 'js/plugins/icheck/icheck.min.js'%}" ></script>
+  <script src="{% static 'js/plugins/mcustomscrollbar/jquery.mCustomScrollbar.min.js'%}" ></script>
+  
+   <!-- END PAGE PLUGINS -->
+  
+</html>
